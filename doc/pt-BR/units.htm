@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title>Guia de unidades</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="guia-de-unidades">
+<h1 class="title">Guia de unidades</h1>
+
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#units" id="id1">1. Units</a><ul>
+<li><a class="reference internal" href="#peasant" id="id2">peasant</a></li>
+<li><a class="reference internal" href="#footman" id="id3">footman</a></li>
+<li><a class="reference internal" href="#archer" id="id4">archer</a></li>
+<li><a class="reference internal" href="#boat" id="id5">boat</a></li>
+<li><a class="reference internal" href="#flying-machine" id="id6">flying machine</a></li>
+<li><a class="reference internal" href="#knight" id="id7">knight</a></li>
+<li><a class="reference internal" href="#destroyer" id="id8">destroyer</a></li>
+<li><a class="reference internal" href="#submarine" id="id9">submarine</a></li>
+<li><a class="reference internal" href="#dark-archer" id="id10">dark archer</a></li>
+<li><a class="reference internal" href="#priest" id="id11">priest</a></li>
+<li><a class="reference internal" href="#battleship" id="id12">battleship</a></li>
+<li><a class="reference internal" href="#catapult" id="id13">catapult</a></li>
+<li><a class="reference internal" href="#dragon" id="id14">dragon</a></li>
+<li><a class="reference internal" href="#mage" id="id15">mage</a></li>
+<li><a class="reference internal" href="#necromancer" id="id16">necromancer</a></li>
+<li><a class="reference internal" href="#offensive-flying-machine" id="id17">offensive flying machine</a></li>
+<li><a class="reference internal" href="#skeleton" id="id18">skeleton</a></li>
+<li><a class="reference internal" href="#zombie" id="id19">zombie</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#buildings" id="id20">2. Buildings</a><ul>
+<li><a class="reference internal" href="#scout-tower" id="id21">scout tower</a></li>
+<li><a class="reference internal" href="#farm" id="id22">farm</a></li>
+<li><a class="reference internal" href="#guard-tower" id="id23">guard tower</a></li>
+<li><a class="reference internal" href="#lumber-mill" id="id24">lumber mill</a></li>
+<li><a class="reference internal" href="#barracks" id="id25">barracks</a></li>
+<li><a class="reference internal" href="#wall" id="id26">wall</a></li>
+<li><a class="reference internal" href="#blacksmith" id="id27">blacksmith</a></li>
+<li><a class="reference internal" href="#gate" id="id28">gate</a></li>
+<li><a class="reference internal" href="#cannon-tower" id="id29">cannon tower</a></li>
+<li><a class="reference internal" href="#shipyard" id="id30">shipyard</a></li>
+<li><a class="reference internal" href="#stables" id="id31">stables</a></li>
+<li><a class="reference internal" href="#workshop" id="id32">workshop</a></li>
+<li><a class="reference internal" href="#town-hall" id="id33">town hall</a></li>
+<li><a class="reference internal" href="#dragons-lair" id="id34">dragons lair</a></li>
+<li><a class="reference internal" href="#mages-tower" id="id35">mages tower</a></li>
+<li><a class="reference internal" href="#necropolis" id="id36">necropolis</a></li>
+<li><a class="reference internal" href="#temple" id="id37">temple</a></li>
+<li><a class="reference internal" href="#massive-wall" id="id38">massive_wall</a></li>
+<li><a class="reference internal" href="#keep" id="id39">keep</a></li>
+<li><a class="reference internal" href="#massive-gate" id="id40">massive_gate</a></li>
+<li><a class="reference internal" href="#castle" id="id41">castle</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#abilities" id="id42">3. Abilities</a><ul>
+<li><a class="reference internal" href="#conversion" id="id43">conversion</a></li>
+<li><a class="reference internal" href="#deadly-fog" id="id44">deadly fog</a></li>
+<li><a class="reference internal" href="#exorcism" id="id45">exorcism</a></li>
+<li><a class="reference internal" href="#holy-vision" id="id46">holy vision</a></li>
+<li><a class="reference internal" href="#meteors" id="id47">meteors</a></li>
+<li><a class="reference internal" href="#raise-dead" id="id48">raise dead</a></li>
+<li><a class="reference internal" href="#recall" id="id49">recall</a></li>
+<li><a class="reference internal" href="#resurrection" id="id50">resurrection</a></li>
+<li><a class="reference internal" href="#summon-dragon" id="id51">summon dragon</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrades-and-research" id="id52">4. Upgrades and research</a><ul>
+<li><a class="reference internal" href="#archer-armor-upgrade" id="id53">archer armor upgrade</a></li>
+<li><a class="reference internal" href="#archer-range-upgrade" id="id54">archer range upgrade</a></li>
+<li><a class="reference internal" href="#archer-weapon-upgrade" id="id55">archer weapon upgrade</a></li>
+<li><a class="reference internal" href="#melee-armor-upgrade" id="id56">melee armor upgrade</a></li>
+<li><a class="reference internal" href="#melee-weapon-upgrade" id="id57">melee weapon upgrade</a></li>
+<li><a class="reference internal" href="#horse-speed-upgrade" id="id58">horse speed upgrade</a></li>
+<li><a class="reference internal" href="#conversion-research" id="id59">conversion research</a></li>
+<li><a class="reference internal" href="#deadly-fog-research" id="id60">deadly fog research</a></li>
+<li><a class="reference internal" href="#exorcism-research" id="id61">exorcism research</a></li>
+<li><a class="reference internal" href="#meteors-research" id="id62">meteors research</a></li>
+<li><a class="reference internal" href="#recall-research" id="id63">recall research</a></li>
+<li><a class="reference internal" href="#resurrection-research" id="id64">resurrection research</a></li>
+<li><a class="reference internal" href="#summon-dragon-research" id="id65">summon dragon research</a></li>
+<li><a class="reference internal" href="#super-healer-upgrade" id="id66">super healer upgrade</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="units">
+<h1><a class="toc-backref" href="#id1">1. Units</a></h1>
+<div class="section" id="peasant">
+<h2><a class="toc-backref" href="#id2">peasant</a></h2>
+<p>The peasant is important but fragile. The peasant collects gold or wood, builds and repairs buildings. Many peasants can help building or repairing a building to go faster. When a peasant can build a new type of building, this new option is added at the end of the list.</p>
+<p>The peasant can fight, and can join a total attack with the command Control + Alt + S.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#town-hall">town hall</a>, <a class="reference internal" href="#keep">keep</a>, <a class="reference internal" href="#castle">castle</a></li>
+<li>total cost: 4 gold, 0 wood</li>
+<li>total food cost: 1 ration</li>
+<li>total time cost: 10 seconds</li>
+<li>health:  4 hit points</li>
+<li>attack:  1.5 hit points every  1 seconds</li>
+<li>attack range:  0.8 meters</li>
+<li>speed:  1.5 meters per second</li>
+<li>can build: <a class="reference internal" href="#farm">farm</a>, <a class="reference internal" href="#barracks">barracks</a>, <a class="reference internal" href="#lumber-mill">lumber mill</a>, <a class="reference internal" href="#blacksmith">blacksmith</a>, <a class="reference internal" href="#wall">wall</a>, <a class="reference internal" href="#gate">gate</a>, <a class="reference internal" href="#scout-tower">scout tower</a>, <a class="reference internal" href="#town-hall">town hall</a>, <a class="reference internal" href="#stables">stables</a>, <a class="reference internal" href="#workshop">workshop</a>, <a class="reference internal" href="#dragons-lair">dragons lair</a>, <a class="reference internal" href="#mages-tower">mages tower</a>, <a class="reference internal" href="#temple">temple</a>, <a class="reference internal" href="#necropolis">necropolis</a>, <a class="reference internal" href="#shipyard">shipyard</a></li>
+</ul>
+</div>
+<div class="section" id="footman">
+<h2><a class="toc-backref" href="#id3">footman</a></h2>
+<p>The footman fights with his sword. He must be close to the target to hit it.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#barracks">barracks</a></li>
+<li>total cost: 6 gold, 0 wood</li>
+<li>total food cost: 1 ration</li>
+<li>total time cost: 12 seconds</li>
+<li>health:  15 hit points</li>
+<li>armor:  0.5 hit points</li>
+<li>armor upgrade bonus:  1 hit points</li>
+<li>attack:  3.5 hit points every  1.5 seconds</li>
+<li>attack upgrade bonus:  2.5 hit points</li>
+<li>attack range:  1 meters</li>
+<li>speed:  1.5 meters per second</li>
+<li>potential improvements:  <a class="reference internal" href="#melee-armor-upgrade">melee armor upgrade</a>, <a class="reference internal" href="#melee-weapon-upgrade">melee weapon upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="archer">
+<h2><a class="toc-backref" href="#id4">archer</a></h2>
+<p>The archer fights with a bow (ranged attack). If the archers are numerous enough, the enemy footmen die before even reaching them.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#barracks">barracks</a></li>
+<li>requires: <a class="reference internal" href="#lumber-mill">lumber mill</a></li>
+<li>total cost: 5 gold, 1 wood</li>
+<li>total food cost: 1 ration</li>
+<li>total time cost: 15 seconds</li>
+<li>health:  10 hit points</li>
+<li>armor:  0 hit points</li>
+<li>attack:  2.5 hit points every  1.5 seconds</li>
+<li>attack range:  4 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>speed:  1.5 meters per second</li>
+<li>can upgrade to: <a class="reference internal" href="#dark-archer">dark archer</a></li>
+<li>potential improvements:  <a class="reference internal" href="#archer-armor-upgrade">archer armor upgrade</a>, <a class="reference internal" href="#archer-range-upgrade">archer range upgrade</a>, <a class="reference internal" href="#archer-weapon-upgrade">archer weapon upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="boat">
+<h2><a class="toc-backref" href="#id5">boat</a></h2>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#shipyard">shipyard</a></li>
+<li>total cost: 5 gold, 5 wood</li>
+<li>total food cost: 1 ration</li>
+<li>total time cost: 10 seconds</li>
+<li>health:  30 hit points</li>
+<li>speed:  1.5 meters per second</li>
+</ul>
+</div>
+<div class="section" id="flying-machine">
+<h2><a class="toc-backref" href="#id6">flying machine</a></h2>
+<p>This new version of the flying machine have the ability to transport units and to detect invisible units but cannot defend itself. Transported units can't attack from a flying machine. If the transport is destroyed, the units inside are destroyed too.</p>
+<p>To load units:</p>
+<ul class="simple">
+<li>Method 1: control the unit(s) to carry, target the flying machine and press backspace.</li>
+<li>Method 2: control the flying machine(s), target the unit to carry and press backspace.</li>
+<li>Method 3: control the flying machine(s), target the square where the units are, select in the menu &quot;load all the units from...&quot;, and press Enter.</li>
+</ul>
+<p>To unload units: control the flying machine(s), select the &quot;unload&quot; action in the menu, target the destination and press Enter.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#workshop">workshop</a></li>
+<li>total cost: 5 gold, 5 wood</li>
+<li>total food cost: 1 ration</li>
+<li>total time cost: 10 seconds</li>
+<li>health:  30 hit points</li>
+<li>speed:  1.5 meters per second</li>
+<li>detects invisible units</li>
+</ul>
+</div>
+<div class="section" id="knight">
+<h2><a class="toc-backref" href="#id7">knight</a></h2>
+<p>The knight fights with his sword and moves fast.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#barracks">barracks</a></li>
+<li>requires: <a class="reference internal" href="#stables">stables</a></li>
+<li>total cost: 15 gold, 0 wood</li>
+<li>total food cost: 2 rations</li>
+<li>total time cost: 20 seconds</li>
+<li>health:  45 hit points</li>
+<li>armor:  1 hit points</li>
+<li>armor upgrade bonus:  1.5 hit points</li>
+<li>attack:  6 hit points every  1.5 seconds</li>
+<li>attack upgrade bonus:  6 hit points</li>
+<li>attack range:  1 meters</li>
+<li>speed:  2.5 meters per second</li>
+<li>potential improvements:  <a class="reference internal" href="#melee-armor-upgrade">melee armor upgrade</a>, <a class="reference internal" href="#melee-weapon-upgrade">melee weapon upgrade</a>, <a class="reference internal" href="#horse-speed-upgrade">horse speed upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="destroyer">
+<h2><a class="toc-backref" href="#id8">destroyer</a></h2>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#shipyard">shipyard</a></li>
+<li>requires: <a class="reference internal" href="#lumber-mill">lumber mill</a></li>
+<li>total cost: 11 gold, 4 wood</li>
+<li>total food cost: 2 rations</li>
+<li>total time cost: 14 seconds</li>
+<li>health:  43 hit points</li>
+<li>armor:  1 hit points</li>
+<li>attack:  6 hit points every  1.5 seconds</li>
+<li>attack range:  6 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>speed:  1.5 meters per second</li>
+<li>potential improvements:  <a class="reference internal" href="#archer-range-upgrade">archer range upgrade</a>, <a class="reference internal" href="#archer-weapon-upgrade">archer weapon upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="submarine">
+<h2><a class="toc-backref" href="#id9">submarine</a></h2>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#shipyard">shipyard</a></li>
+<li>requires: <a class="reference internal" href="#lumber-mill">lumber mill</a>, <a class="reference internal" href="#mages-tower">mages tower</a></li>
+<li>total cost: 11 gold, 4 wood</li>
+<li>total food cost: 1 ration</li>
+<li>total time cost: 14 seconds</li>
+<li>health:  43 hit points</li>
+<li>armor:  1 hit points</li>
+<li>attack:  6 hit points every  1.5 seconds</li>
+<li>attack range:  6 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>speed:  1.5 meters per second</li>
+<li>detects invisible units</li>
+<li>is invisible</li>
+<li>potential improvements:  <a class="reference internal" href="#archer-range-upgrade">archer range upgrade</a>, <a class="reference internal" href="#archer-weapon-upgrade">archer weapon upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="dark-archer">
+<h2><a class="toc-backref" href="#id10">dark archer</a></h2>
+<p>Any archer can become a dark archer.</p>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#lumber-mill">lumber mill</a>, <a class="reference internal" href="#mages-tower">mages tower</a></li>
+<li>total cost: 10 gold, 5 wood</li>
+<li>total food cost: 1 ration</li>
+<li>total time cost: 75 seconds</li>
+<li>health:  12 hit points</li>
+<li>armor:  0 hit points</li>
+<li>attack:  10 hit points every  3 seconds</li>
+<li>attack range:  5 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>speed:  1.5 meters per second</li>
+<li>is invisible</li>
+<li>potential improvements:  <a class="reference internal" href="#archer-armor-upgrade">archer armor upgrade</a>, <a class="reference internal" href="#archer-range-upgrade">archer range upgrade</a>, <a class="reference internal" href="#archer-weapon-upgrade">archer weapon upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="priest">
+<h2><a class="toc-backref" href="#id11">priest</a></h2>
+<p>The priest heals automatically all the friendly units located in the same square (0.13 hit point per second initially, and 1.33 hit points per second after the &quot;super healer&quot; upgrade). The priest cannot directly attack though.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#temple">temple</a></li>
+<li>total cost: 15 gold, 7 wood</li>
+<li>total food cost: 2 rations</li>
+<li>total time cost: 20 seconds</li>
+<li>health:  30 hit points</li>
+<li>speed:  1 meters per second</li>
+<li>healing power: 1</li>
+<li>special abilities:  <a class="reference internal" href="#conversion">conversion</a>, <a class="reference internal" href="#exorcism">exorcism</a>, <a class="reference internal" href="#holy-vision">holy vision</a>, <a class="reference internal" href="#resurrection">resurrection</a></li>
+<li>potential improvements:  <a class="reference internal" href="#super-healer-upgrade">super healer upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="battleship">
+<h2><a class="toc-backref" href="#id12">battleship</a></h2>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#shipyard">shipyard</a></li>
+<li>requires: <a class="reference internal" href="#lumber-mill">lumber mill</a>, <a class="reference internal" href="#workshop">workshop</a></li>
+<li>total cost: 15 gold, 10 wood</li>
+<li>total food cost: 3 rations</li>
+<li>total time cost: 30 seconds</li>
+<li>health:  30 hit points</li>
+<li>attack:  8 hit points every  4 seconds</li>
+<li>damage radius (area of effect):  0.25 meters</li>
+<li>attack range:  12 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>speed:  0.75 meters per second</li>
+</ul>
+</div>
+<div class="section" id="catapult">
+<h2><a class="toc-backref" href="#id13">catapult</a></h2>
+<p>The catapult can strike units and buildings located in an adjacent square. The catapult can also damage several enemies at a time.</p>
+<p>On the other hand, the catapult is very fragile and cannot even defend itself against a unit in the same square. It moves very slowly too.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#workshop">workshop</a></li>
+<li>total cost: 15 gold, 10 wood</li>
+<li>total food cost: 2 rations</li>
+<li>total time cost: 30 seconds</li>
+<li>health:  30 hit points</li>
+<li>attack:  8 hit points every  4 seconds</li>
+<li>damage radius (area of effect):  0.25 meters</li>
+<li>attack range:  12 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>speed:  0.75 meters per second</li>
+</ul>
+</div>
+<div class="section" id="dragon">
+<h2><a class="toc-backref" href="#id14">dragon</a></h2>
+<p>The dragon, flying creature, cannot be reached by peasants or footmen or knights or catapults. It flies directly to its destination, without having to follow the ground paths.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#dragons-lair">dragons lair</a></li>
+<li>total cost: 15 gold, 10 wood</li>
+<li>total food cost: 3 rations</li>
+<li>total time cost: 15 seconds</li>
+<li>health:  30 hit points</li>
+<li>health regeneration:  0.15 hit points per second</li>
+<li>attack:  4 hit points every  4 seconds</li>
+<li>damage radius (area of effect):  1 meters</li>
+<li>attack range:  4 meters</li>
+<li>speed:  1.75 meters per second</li>
+</ul>
+</div>
+<div class="section" id="mage">
+<h2><a class="toc-backref" href="#id15">mage</a></h2>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#mages-tower">mages tower</a></li>
+<li>total cost: 20 gold, 10 wood</li>
+<li>total food cost: 3 rations</li>
+<li>total time cost: 30 seconds</li>
+<li>health:  30 hit points</li>
+<li>attack:  8 hit points every  1.5 seconds</li>
+<li>attack range:  6 meters</li>
+<li>speed:  1 meters per second</li>
+<li>special abilities:  <a class="reference internal" href="#meteors">meteors</a>, <a class="reference internal" href="#recall">recall</a>, <a class="reference internal" href="#summon-dragon">summon dragon</a></li>
+</ul>
+</div>
+<div class="section" id="necromancer">
+<h2><a class="toc-backref" href="#id16">necromancer</a></h2>
+<p>Necromancers raise armies of animated corpses.</p>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#necropolis">necropolis</a></li>
+<li>total cost: 20 gold, 10 wood</li>
+<li>total food cost: 3 rations</li>
+<li>total time cost: 30 seconds</li>
+<li>health:  30 hit points</li>
+<li>attack:  8 hit points every  1.5 seconds</li>
+<li>attack range:  6 meters</li>
+<li>speed:  1 meters per second</li>
+<li>special abilities:  <a class="reference internal" href="#deadly-fog">deadly fog</a>, <a class="reference internal" href="#raise-dead">raise dead</a></li>
+</ul>
+</div>
+<div class="section" id="offensive-flying-machine">
+<h2><a class="toc-backref" href="#id17">offensive flying machine</a></h2>
+<ul class="simple">
+<li>trained by:  <a class="reference internal" href="#workshop">workshop</a></li>
+<li>requires: <a class="reference internal" href="#mages-tower">mages tower</a></li>
+<li>total cost: 20 gold, 10 wood</li>
+<li>total food cost: 3 rations</li>
+<li>total time cost: 30 seconds</li>
+<li>health:  30 hit points</li>
+<li>attack:  8 hit points every  1.5 seconds</li>
+<li>attack range:  5 meters</li>
+<li>speed:  1.5 meters per second</li>
+</ul>
+</div>
+<div class="section" id="skeleton">
+<h2><a class="toc-backref" href="#id18">skeleton</a></h2>
+<ul class="simple">
+<li>health:  15 hit points</li>
+<li>armor:  0 hit points</li>
+<li>attack:  2.5 hit points every  1.5 seconds</li>
+<li>attack range:  4 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>speed:  1.5 meters per second</li>
+<li>potential improvements:  <a class="reference internal" href="#archer-armor-upgrade">archer armor upgrade</a>, <a class="reference internal" href="#archer-range-upgrade">archer range upgrade</a>, <a class="reference internal" href="#archer-weapon-upgrade">archer weapon upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="zombie">
+<h2><a class="toc-backref" href="#id19">zombie</a></h2>
+<ul class="simple">
+<li>health:  23 hit points</li>
+<li>armor:  0.5 hit points</li>
+<li>armor upgrade bonus:  1 hit points</li>
+<li>attack:  5 hit points every  3 seconds</li>
+<li>attack upgrade bonus:  2.5 hit points</li>
+<li>attack range:  1 meters</li>
+<li>speed:  1 meters per second</li>
+<li>potential improvements:  <a class="reference internal" href="#melee-armor-upgrade">melee armor upgrade</a>, <a class="reference internal" href="#melee-weapon-upgrade">melee weapon upgrade</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="buildings">
+<h1><a class="toc-backref" href="#id20">2. Buildings</a></h1>
+<div class="section" id="scout-tower">
+<h2><a class="toc-backref" href="#id21">scout tower</a></h2>
+<p>The scout tower can't defend itself, but it can quickly evolve to a guard tower (requires a sawmill) or a cannon tower (requires a blacksmith). In the early game, the scout tower is sometimes built &quot;just in case&quot; of a rushed attack, with a smaller investment than the cost of a fully equipped tower. A tower doesn't require food and can be built anywhere (not only on a meadow).</p>
+<ul class="simple">
+<li>total cost: 6 gold, 2 wood</li>
+<li>total time cost: 60 seconds</li>
+<li>health:  33 hit points</li>
+<li>can upgrade to: <a class="reference internal" href="#guard-tower">guard tower</a>, <a class="reference internal" href="#cannon-tower">cannon tower</a></li>
+<li>have a height bonus (useful for sight and eventually attack range)</li>
+</ul>
+</div>
+<div class="section" id="farm">
+<h2><a class="toc-backref" href="#id22">farm</a></h2>
+<p>Farms provide food rations.</p>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#town-hall">town hall</a></li>
+<li>total cost: 5 gold, 5 wood</li>
+<li>total time cost: 45 seconds</li>
+<li>health:  133.3 hit points</li>
+<li>food provided: 8 rations</li>
+</ul>
+</div>
+<div class="section" id="guard-tower">
+<h2><a class="toc-backref" href="#id23">guard tower</a></h2>
+<p>The guard tower shoots arrows, like an archer.</p>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#lumber-mill">lumber mill</a></li>
+<li>total cost: 11 gold, 4 wood</li>
+<li>total time cost: 140 seconds</li>
+<li>health:  43 hit points</li>
+<li>armor:  1 hit points</li>
+<li>attack:  6 hit points every  1.5 seconds</li>
+<li>attack range:  6 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>have a height bonus (useful for sight and eventually attack range)</li>
+<li>potential improvements:  <a class="reference internal" href="#archer-range-upgrade">archer range upgrade</a>, <a class="reference internal" href="#archer-weapon-upgrade">archer weapon upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="lumber-mill">
+<h2><a class="toc-backref" href="#id24">lumber mill</a></h2>
+<p>The lumber mill can store wood. If a lumber mill is nearer than the townhall, the peasant can bring back the wood there to save time. Moreover, having at least one lumber mill gives a 25 % bonus for the wood production.</p>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#town-hall">town hall</a></li>
+<li>total cost: 6 gold, 9 wood</li>
+<li>total time cost: 68 seconds</li>
+<li>health:  200 hit points</li>
+<li>can store:  wood</li>
+<li>can research: <a class="reference internal" href="#archer-weapon-upgrade">archer weapon upgrade</a>, <a class="reference internal" href="#archer-armor-upgrade">archer armor upgrade</a>, <a class="reference internal" href="#archer-range-upgrade">archer range upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="barracks">
+<h2><a class="toc-backref" href="#id25">barracks</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#town-hall">town hall</a></li>
+<li>total cost: 7 gold, 9 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  266.7 hit points</li>
+<li>can train: <a class="reference internal" href="#footman">footman</a>, <a class="reference internal" href="#archer">archer</a>, <a class="reference internal" href="#knight">knight</a></li>
+</ul>
+</div>
+<div class="section" id="wall">
+<h2><a class="toc-backref" href="#id26">wall</a></h2>
+<p>A wall must be built on an exit (path, bridge).</p>
+<ul class="simple">
+<li>total cost: 7 gold, 9 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  500 hit points</li>
+<li>can upgrade to: <a class="reference internal" href="#massive-wall">massive_wall</a></li>
+</ul>
+</div>
+<div class="section" id="blacksmith">
+<h2><a class="toc-backref" href="#id27">blacksmith</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#town-hall">town hall</a></li>
+<li>total cost: 8 gold, 10 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  266.7 hit points</li>
+<li>can research: <a class="reference internal" href="#melee-weapon-upgrade">melee weapon upgrade</a>, <a class="reference internal" href="#melee-armor-upgrade">melee armor upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="gate">
+<h2><a class="toc-backref" href="#id28">gate</a></h2>
+<p>A gate must be built on an exit (path, bridge). It lets friendly units move through it.</p>
+<ul class="simple">
+<li>total cost: 10 gold, 10 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  450 hit points</li>
+<li>can upgrade to: <a class="reference internal" href="#massive-gate">massive_gate</a></li>
+</ul>
+</div>
+<div class="section" id="cannon-tower">
+<h2><a class="toc-backref" href="#id29">cannon tower</a></h2>
+<p>The cannon tower only attacks ground units.</p>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#blacksmith">blacksmith</a></li>
+<li>total cost: 16 gold, 5 wood</li>
+<li>total time cost: 190 seconds</li>
+<li>health:  53 hit points</li>
+<li>armor:  1 hit points</li>
+<li>attack:  8 hit points every  4 seconds</li>
+<li>damage radius (area of effect):  1 meters</li>
+<li>attack range:  7 meters</li>
+<li>can attack units located in an adjacent square if their altitude is lower (new in SoundRTS 1.2 alpha 9).</li>
+<li>have a height bonus (useful for sight and eventually attack range)</li>
+</ul>
+</div>
+<div class="section" id="shipyard">
+<h2><a class="toc-backref" href="#id30">shipyard</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#town-hall">town hall</a>, <a class="reference internal" href="#lumber-mill">lumber mill</a></li>
+<li>total cost: 10 gold, 15 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  266.7 hit points</li>
+<li>can train: <a class="reference internal" href="#boat">boat</a>, <a class="reference internal" href="#destroyer">destroyer</a>, <a class="reference internal" href="#battleship">battleship</a>, <a class="reference internal" href="#submarine">submarine</a></li>
+</ul>
+</div>
+<div class="section" id="stables">
+<h2><a class="toc-backref" href="#id31">stables</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#keep">keep</a></li>
+<li>total cost: 10 gold, 15 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  266.7 hit points</li>
+<li>can research: <a class="reference internal" href="#horse-speed-upgrade">horse speed upgrade</a></li>
+</ul>
+</div>
+<div class="section" id="workshop">
+<h2><a class="toc-backref" href="#id32">workshop</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#keep">keep</a></li>
+<li>total cost: 10 gold, 15 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  266.7 hit points</li>
+<li>can train: <a class="reference internal" href="#catapult">catapult</a>, <a class="reference internal" href="#flying-machine">flying machine</a>, <a class="reference internal" href="#offensive-flying-machine">offensive flying machine</a></li>
+</ul>
+</div>
+<div class="section" id="town-hall">
+<h2><a class="toc-backref" href="#id33">town hall</a></h2>
+<ul class="simple">
+<li>total cost: 12 gold, 16 wood</li>
+<li>total time cost: 135 seconds</li>
+<li>health:  400 hit points</li>
+<li>food provided: 1 ration</li>
+<li>healing power: 1</li>
+<li>can store:  gold, wood</li>
+<li>can train: <a class="reference internal" href="#peasant">peasant</a></li>
+<li>can upgrade to: <a class="reference internal" href="#keep">keep</a></li>
+</ul>
+</div>
+<div class="section" id="dragons-lair">
+<h2><a class="toc-backref" href="#id34">dragons lair</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#castle">castle</a></li>
+<li>total cost: 15 gold, 20 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  266.7 hit points</li>
+<li>can train: <a class="reference internal" href="#dragon">dragon</a></li>
+</ul>
+</div>
+<div class="section" id="mages-tower">
+<h2><a class="toc-backref" href="#id35">mages tower</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#castle">castle</a></li>
+<li>total cost: 15 gold, 20 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  266.7 hit points</li>
+<li>can train: <a class="reference internal" href="#mage">mage</a></li>
+<li>can research: <a class="reference internal" href="#recall-research">recall research</a>, <a class="reference internal" href="#summon-dragon-research">summon dragon research</a>, <a class="reference internal" href="#meteors-research">meteors research</a></li>
+</ul>
+</div>
+<div class="section" id="necropolis">
+<h2><a class="toc-backref" href="#id36">necropolis</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#castle">castle</a></li>
+<li>total cost: 10 gold, 30 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  300 hit points</li>
+<li>can train: <a class="reference internal" href="#necromancer">necromancer</a></li>
+<li>can research: <a class="reference internal" href="#deadly-fog-research">deadly fog research</a></li>
+</ul>
+</div>
+<div class="section" id="temple">
+<h2><a class="toc-backref" href="#id37">temple</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#keep">keep</a></li>
+<li>total cost: 10 gold, 30 wood</li>
+<li>total time cost: 90 seconds</li>
+<li>health:  300 hit points</li>
+<li>can train: <a class="reference internal" href="#priest">priest</a></li>
+<li>can research: <a class="reference internal" href="#super-healer-upgrade">super healer upgrade</a>, <a class="reference internal" href="#exorcism-research">exorcism research</a>, <a class="reference internal" href="#conversion-research">conversion research</a>, <a class="reference internal" href="#resurrection-research">resurrection research</a></li>
+</ul>
+</div>
+<div class="section" id="massive-wall">
+<h2><a class="toc-backref" href="#id38">massive_wall</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#keep">keep</a></li>
+<li>total cost: 21 gold, 27 wood</li>
+<li>total time cost: 270 seconds</li>
+<li>health:  2000 hit points</li>
+</ul>
+</div>
+<div class="section" id="keep">
+<h2><a class="toc-backref" href="#id39">keep</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#barracks">barracks</a></li>
+<li>total cost: 22 gold, 31 wood</li>
+<li>total time cost: 315 seconds</li>
+<li>health:  800 hit points</li>
+<li>food provided: 1 ration</li>
+<li>healing power: 2</li>
+<li>can store:  gold, wood</li>
+<li>can train: <a class="reference internal" href="#peasant">peasant</a></li>
+<li>can upgrade to: <a class="reference internal" href="#castle">castle</a></li>
+</ul>
+</div>
+<div class="section" id="massive-gate">
+<h2><a class="toc-backref" href="#id40">massive_gate</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#keep">keep</a></li>
+<li>total cost: 30 gold, 30 wood</li>
+<li>total time cost: 270 seconds</li>
+<li>health:  1800 hit points</li>
+</ul>
+</div>
+<div class="section" id="castle">
+<h2><a class="toc-backref" href="#id41">castle</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#barracks">barracks</a>, <a class="reference internal" href="#lumber-mill">lumber mill</a>, <a class="reference internal" href="#blacksmith">blacksmith</a>, <a class="reference internal" href="#stables">stables</a></li>
+<li>total cost: 42 gold, 61 wood</li>
+<li>total time cost: 675 seconds</li>
+<li>health:  1600 hit points</li>
+<li>food provided: 1 ration</li>
+<li>healing power: 4</li>
+<li>can store:  gold, wood</li>
+<li>can train: <a class="reference internal" href="#peasant">peasant</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="abilities">
+<h1><a class="toc-backref" href="#id42">3. Abilities</a></h1>
+<div class="section" id="conversion">
+<h2><a class="toc-backref" href="#id43">conversion</a></h2>
+<p>Conversion is a way to take control of an enemy unit. The unit will be one of your units. Buildings can be converted too.</p>
+<p>To convert an enemy unit:</p>
+<ol class="arabic simple">
+<li>select the caster for orders</li>
+<li>select the conversion order</li>
+<li>select an enemy unit or building as a target (warning: if you are selecting a mobile unit in a currently unobserved square, the unit might be actually elsewhere and the order will be canceled when the caster arrives in the square)</li>
+<li>validate the order</li>
+</ol>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#conversion-research">conversion research</a></li>
+<li>mana cost: 150 mana points</li>
+</ul>
+</div>
+<div class="section" id="deadly-fog">
+<h2><a class="toc-backref" href="#id44">deadly fog</a></h2>
+<p>The deadly fog damages any healable unit in the targeted square.</p>
+<ul class="simple">
+<li>duration: 15 seconds</li>
+<li>damage: 0.13 hit point per second</li>
+<li>requires: <a class="reference internal" href="#deadly-fog-research">deadly fog research</a></li>
+<li>mana cost: 150 mana points</li>
+</ul>
+</div>
+<div class="section" id="exorcism">
+<h2><a class="toc-backref" href="#id45">exorcism</a></h2>
+<p>Exorcism damages any undead unit in the same square.</p>
+<ul class="simple">
+<li>duration: 15 seconds</li>
+<li>damage: 0.27 hit point per second</li>
+<li>requires: <a class="reference internal" href="#exorcism-research">exorcism research</a></li>
+<li>mana cost: 150 mana points</li>
+</ul>
+</div>
+<div class="section" id="holy-vision">
+<h2><a class="toc-backref" href="#id46">holy vision</a></h2>
+<p>Reveals any square for 10 seconds. Detects invisible units.</p>
+<ul class="simple">
+<li>mana cost: 30 mana points</li>
+</ul>
+</div>
+<div class="section" id="meteors">
+<h2><a class="toc-backref" href="#id47">meteors</a></h2>
+<p>Meteors damage all the units and buildings in the targeted square.</p>
+<ul class="simple">
+<li>duration: 15 seconds</li>
+<li>damage: 0.13 hit point per second</li>
+<li>requires: <a class="reference internal" href="#meteors-research">meteors research</a></li>
+<li>mana cost: 150 mana points</li>
+</ul>
+</div>
+<div class="section" id="raise-dead">
+<h2><a class="toc-backref" href="#id48">raise dead</a></h2>
+<p>Animates up to 10 corpses in the same square. An animated corpse is either a <a class="reference internal" href="#zombie">zombie</a> or a <a class="reference internal" href="#skeleton">skeleton</a>. After 10 minutes, the animated corpses will crumble to dust.</p>
+<ul class="simple">
+<li>mana cost: 50 mana points</li>
+</ul>
+</div>
+<div class="section" id="recall">
+<h2><a class="toc-backref" href="#id49">recall</a></h2>
+<p>Recall is the ability to instantly move units to the caster's place. The affected units are the friendly units in the targeted square.</p>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#recall-research">recall research</a></li>
+<li>mana cost: 150 mana points</li>
+</ul>
+</div>
+<div class="section" id="resurrection">
+<h2><a class="toc-backref" href="#id50">resurrection</a></h2>
+<p>Resurrects up to 6 nearby units, with 33 percent of their hit points. Affects only your units.</p>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#resurrection-research">resurrection research</a></li>
+<li>mana cost: 150 mana points</li>
+</ul>
+</div>
+<div class="section" id="summon-dragon">
+<h2><a class="toc-backref" href="#id51">summon dragon</a></h2>
+<p>Summons 2 dragons for 2 minutes. See <a class="reference internal" href="#dragon">dragon</a> .</p>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#summon-dragon-research">summon dragon research</a></li>
+<li>mana cost: 150 mana points</li>
+</ul>
+</div>
+</div>
+<div class="section" id="upgrades-and-research">
+<h1><a class="toc-backref" href="#id52">4. Upgrades and research</a></h1>
+<div class="section" id="archer-armor-upgrade">
+<h2><a class="toc-backref" href="#id53">archer armor upgrade</a></h2>
+<ul class="simple">
+<li>total cost: 8 gold, 10 wood</li>
+<li>total time cost: 60 seconds</li>
+<li>effect: armor + 0.5</li>
+</ul>
+</div>
+<div class="section" id="archer-range-upgrade">
+<h2><a class="toc-backref" href="#id54">archer range upgrade</a></h2>
+<ul class="simple">
+<li>total cost: 8 gold, 10 wood</li>
+<li>total time cost: 60 seconds</li>
+<li>effect: range + 1</li>
+</ul>
+</div>
+<div class="section" id="archer-weapon-upgrade">
+<h2><a class="toc-backref" href="#id55">archer weapon upgrade</a></h2>
+<ul class="simple">
+<li>total cost: 8 gold, 10 wood</li>
+<li>total time cost: 60 seconds</li>
+<li>effect: damage + 1.5</li>
+</ul>
+</div>
+<div class="section" id="melee-armor-upgrade">
+<h2><a class="toc-backref" href="#id56">melee armor upgrade</a></h2>
+<ul class="simple">
+<li>total cost: 8 gold, 10 wood</li>
+<li>total time cost: 60 seconds</li>
+<li>effect: applies the armor upgrade bonus of the unit</li>
+</ul>
+</div>
+<div class="section" id="melee-weapon-upgrade">
+<h2><a class="toc-backref" href="#id57">melee weapon upgrade</a></h2>
+<ul class="simple">
+<li>total cost: 8 gold, 10 wood</li>
+<li>total time cost: 60 seconds</li>
+<li>effect: applies the damage upgrade bonus of the unit</li>
+</ul>
+</div>
+<div class="section" id="horse-speed-upgrade">
+<h2><a class="toc-backref" href="#id58">horse speed upgrade</a></h2>
+<ul class="simple">
+<li>total cost: 15 gold, 5 wood</li>
+<li>total time cost: 60 seconds</li>
+<li>effect: speed + 2.5</li>
+</ul>
+</div>
+<div class="section" id="conversion-research">
+<h2><a class="toc-backref" href="#id59">conversion research</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#castle">castle</a></li>
+<li>total cost: 50 gold, 0 wood</li>
+<li>total time cost: 120 seconds</li>
+</ul>
+</div>
+<div class="section" id="deadly-fog-research">
+<h2><a class="toc-backref" href="#id60">deadly fog research</a></h2>
+<ul class="simple">
+<li>total cost: 50 gold, 0 wood</li>
+<li>total time cost: 120 seconds</li>
+</ul>
+</div>
+<div class="section" id="exorcism-research">
+<h2><a class="toc-backref" href="#id61">exorcism research</a></h2>
+<ul class="simple">
+<li>total cost: 50 gold, 0 wood</li>
+<li>total time cost: 120 seconds</li>
+</ul>
+</div>
+<div class="section" id="meteors-research">
+<h2><a class="toc-backref" href="#id62">meteors research</a></h2>
+<ul class="simple">
+<li>total cost: 50 gold, 0 wood</li>
+<li>total time cost: 120 seconds</li>
+</ul>
+</div>
+<div class="section" id="recall-research">
+<h2><a class="toc-backref" href="#id63">recall research</a></h2>
+<ul class="simple">
+<li>total cost: 50 gold, 0 wood</li>
+<li>total time cost: 120 seconds</li>
+</ul>
+</div>
+<div class="section" id="resurrection-research">
+<h2><a class="toc-backref" href="#id64">resurrection research</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#castle">castle</a></li>
+<li>total cost: 50 gold, 0 wood</li>
+<li>total time cost: 120 seconds</li>
+</ul>
+</div>
+<div class="section" id="summon-dragon-research">
+<h2><a class="toc-backref" href="#id65">summon dragon research</a></h2>
+<ul class="simple">
+<li>total cost: 50 gold, 0 wood</li>
+<li>total time cost: 120 seconds</li>
+</ul>
+</div>
+<div class="section" id="super-healer-upgrade">
+<h2><a class="toc-backref" href="#id66">super healer upgrade</a></h2>
+<ul class="simple">
+<li>requires: <a class="reference internal" href="#castle">castle</a></li>
+<li>total cost: 80 gold, 0 wood</li>
+<li>total time cost: 120 seconds</li>
+<li>effect: heal_level + 9</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

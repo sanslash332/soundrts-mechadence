@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title>Manual do jogo</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="manual-do-jogo">
+<h1 class="title">Manual do jogo</h1>
+
+<!-- language: pt_BR -->
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#introducao" id="id1">1. Introdução</a></li>
+<li><a class="reference internal" href="#tutorial" id="id2">2. Tutorial</a><ul>
+<li><a class="reference internal" href="#tutorial-do-capitulo-1" id="id3">2.1 Tutorial do capítulo 1</a></li>
+<li><a class="reference internal" href="#tutorial-do-capitulo-2" id="id4">2.2 Tutorial do capítulo 2</a></li>
+<li><a class="reference internal" href="#dicas-e-truques" id="id5">2.3 Dicas e truques</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lista-de-comandos" id="id6">3. Lista de comandos</a><ul>
+<li><a class="reference internal" href="#movendo-se-pelo-mapa" id="id7">Movendo-se pelo mapa</a></li>
+<li><a class="reference internal" href="#escolhendo-uma-unidade-para-controlar" id="id8">Escolhendo uma unidade para controlar</a></li>
+<li><a class="reference internal" href="#dando-uma-ordem-metodo-principal" id="id9">Dando uma ordem (método principal)</a></li>
+<li><a class="reference internal" href="#dando-uma-ordem-metodo-alternativo" id="id10">Dando uma ordem: método alternativo</a></li>
+<li><a class="reference internal" href="#dando-uma-ordem-usando-atalhos" id="id11">Dando uma ordem: usando atalhos</a></li>
+<li><a class="reference internal" href="#examinando-a-situacao" id="id12">Examinando a situação</a></li>
+<li><a class="reference internal" href="#dando-uma-ordem-sem-cancelar-as-anteriores-enfileirando-comandos" id="id13">Dando uma ordem sem cancelar as anteriores (enfileirando comandos)</a></li>
+<li><a class="reference internal" href="#dando-uma-ordem-imperativa" id="id14">Dando uma ordem imperativa</a></li>
+<li><a class="reference internal" href="#atacando-uma-unidade-amiga" id="id15">Atacando uma unidade amiga</a></li>
+<li><a class="reference internal" href="#bloqueando-uma-saida" id="id16">Bloqueando uma saída</a></li>
+<li><a class="reference internal" href="#modo-zoom-experimental" id="id17">Modo zoom (experimental)</a></li>
+<li><a class="reference internal" href="#grupos-de-controle" id="id18">Grupos de controle</a></li>
+<li><a class="reference internal" href="#nos-menus" id="id19">Nos menus</a></li>
+<li><a class="reference internal" href="#outros-comandos" id="id20">Outros comandos</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#jogos-multijogador" id="id21">4. Jogos multijogador</a><ul>
+<li><a class="reference internal" href="#iniciando-um-jogo-multijogador" id="id22">4.1 Iniciando um jogo multijogador</a></li>
+<li><a class="reference internal" href="#conversando" id="id23">4.2 Conversando</a></li>
+<li><a class="reference internal" href="#jogo-em-equipe" id="id24">4.3 Jogo em equipe</a></li>
+<li><a class="reference internal" href="#como-fazer-com-que-seu-servidor-fique-acessivel-a-outros-jogadores" id="id25">4.4 Como fazer com que seu servidor fique acessível a outros jogadores</a></li>
+<li><a class="reference internal" href="#como-baixar-um-mapa-de-um-servidor" id="id26">4.5 Como baixar um mapa de um servidor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#elementos-do-jogo" id="id27">5. Elementos do jogo</a><ul>
+<li><a class="reference internal" href="#comida" id="id28">Comida</a></li>
+<li><a class="reference internal" href="#investimento-de-tecnologia" id="id29">Investimento de tecnologia</a></li>
+<li><a class="reference internal" href="#unidades-voadoras" id="id30">Unidades voadoras</a></li>
+<li><a class="reference internal" href="#unidades-invisiveis-e-detectoras" id="id31">Unidades invisíveis e detectoras</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mais-detalhes-para-personalizacao" id="id32">6. Mais detalhes para personalização</a><ul>
+<li><a class="reference internal" href="#soundrts-ini" id="id33">SoundRTS.ini</a></li>
+<li><a class="reference internal" href="#opcoes-da-linha-de-comando" id="id34">Opções da linha de comando</a></li>
+<li><a class="reference internal" href="#pacote-de-sons" id="id35">Pacote de sons</a></li>
+<li><a class="reference internal" href="#sapi-5-windows" id="id36">SAPI 5 (Windows)</a></li>
+<li><a class="reference internal" href="#parametro-srapi-para-windows" id="id37">Parâmetro srapi para Windows</a></li>
+<li><a class="reference internal" href="#parametro-srapi-wait-para-windows" id="id38">Parâmetro srapi_wait para Windows</a></li>
+<li><a class="reference internal" href="#pasta-temporaria" id="id39">Pasta temporária</a></li>
+<li><a class="reference internal" href="#pasta-do-usuario" id="id40">Pasta do usuário</a></li>
+<li><a class="reference internal" href="#como-criar-uma-versao-portatil-do-soundrts" id="id41">Como criar uma versão portátil do SoundRTS</a></li>
+<li><a class="reference internal" href="#como-mudar-a-velocidade-padrao-de-jogos-offline" id="id42">Como mudar a velocidade padrão de jogos offline</a></li>
+<li><a class="reference internal" href="#mudando-algumas-teclas-do-jogo" id="id43">Mudando algumas teclas do jogo</a></li>
+<li><a class="reference internal" href="#criando-um-app-para-mac" id="id44">Criando um app para Mac</a></li>
+<li><a class="reference internal" href="#usando-o-instalador-do-windows-com-uma-conta-limitada-windows-xp" id="id45">Usando o instalador do Windows com uma conta limitada (Windows XP)</a></li>
+<li><a class="reference internal" href="#o-que-faz-um-mapa-multijogador-ser-oficial" id="id46">O que faz um mapa multijogador ser oficial?</a></li>
+<li><a class="reference internal" href="#como-selecionar-um-idioma-diferente" id="id47">Como selecionar um idioma diferente?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creditos" id="id48">7. Créditos</a></li>
+</ul>
+</div>
+<div class="section" id="introducao">
+<h1><a class="toc-backref" href="#id1">1. Introdução</a></h1>
+<p>Bem-vindo ao SoundRTS!</p>
+<p>SoundRTS é um jogo de estratégia em tempo real inspirado por Warcraft e Starcraft, mas um áudio-jogo, portanto adaptado para cegos.
+Nesse jogo, você explorará os arredores, explorará minas de ouro e bosques,
+construirá, recrutará operários e soldados, e lutará contra o inimigo!</p>
+<p>Por padrão o jogo está no modo mapa: você está virado para norte pode
+selecionar todos os objetos sem a necessidade de se virar.
+Você pode, todavia, jogar no modo em primeira pessoa, útil para
+exploração e ataque.</p>
+<p>No Windows, você precisará de um leitor de tela ou de uma voz SAPI 5.
+No Linux o jogo usa o Speech Dispatcher.
+Mac OS X usa NS Speech Synthesis.
+A fala gravada foi totalmente removida no SoundRTS 1.2-alpha9.</p>
+</div>
+<div class="section" id="tutorial">
+<h1><a class="toc-backref" href="#id2">2. Tutorial</a></h1>
+<p>Esse tutorial irá ajudá-lo a aprender os principais controles do jogo.</p>
+<div class="section" id="tutorial-do-capitulo-1">
+<h2><a class="toc-backref" href="#id3">2.1 Tutorial do capítulo 1</a></h2>
+<p>Se você usa o Jaws ou alguma revisão de tela, talvez você precise
+desativá-la para ter acesso completo ao teclado.</p>
+<p>Quando o jogo começar, você ouvirá o nome do quadrado onde você está: &quot;A1&quot;.
+A presença de uma mina de ouro em A1 é também anunciada. Para examinar
+esse quadrado, pressione Tab algumas vezes.
+Você vai notar que esse quadrado tem apenas uma saída (um caminho), uma
+mina de ouro, um bosque, prefeitura 1 (é a sua base), e o operário 1.</p>
+<p>Então pressione &quot;Page Down&quot; para saber se outro quadrado pode ser
+examinado. Você ouvirá &quot;C1&quot;, que contém (pressione Tab para saber) uma
+fazenda, um caminho, um bosque e o soldado 1.</p>
+<p>Se você pressionar &quot;Page Down&quot; novamente, estará de novo em &quot;A1&quot;. Isso
+significa que apenas dois quadrados podem ser examinados no momento.</p>
+<p>Uma forma alternativa de se mover pelo mapa é usar as setas. Assim você pode
+passar pelos quadrados desconhecidos para selecionar um deles como alvo de uma ordem.</p>
+<p>O objetivo desse mapa é construir uma fazenda e um quartel. Apenas o
+operário pode fazer isso. Mas ele precisa de ouro e madeira, e um
+espaço livre (um terreno). Para saber quanto de ouro, madeira e comida
+você tem, pressione z, x e c, respectivamente.</p>
+<p>Vamos mandar o operário recolher ouro. Primeiro, para controlá-lo, pressione Q
+até que você ouça &quot;operário 1, esperando ordens!&quot;. Então, pressione A
+até selecionar &quot;explorar&quot;; então pressione Tab algumas vezes para selecionar a mina de ouro, e dê
+Enter para confirmar. O operário vai começar a extrair o ouro.</p>
+<p>Para ir mais rápido você precisará de mais operários. Pressione Q para
+controlar a prefeitura, pressione A até Recrutar Operário e pressione Enter para confirmar.
+Após alguns segundos, um novo operário, operário 2, aparecerá.</p>
+<p>Para mandar o operário 2 recolher madeira, faça como o primeiro ou, para ir mais rápido, pressione Q até controlar o operário 2, então
+pressione Tab para selecionar a mina de ouro, e finalmente pressione &quot;Backspace&quot;.
+Essa tecla faz a ação padrão no alvo selecionado: aqui, a ação padrão é
+&quot;explorar a mina de ouro&quot;.</p>
+<p>Antes de recrutar um terceiro operário, vamos dizer para a prefeitura 1
+que todos os novos operários deverão explorar a mina de ouro. Para fazer
+isso, pressione Q até controlar a prefeitura 1. Então pressione Tab até selecionar a mina de
+ouro. Finalmente, pressione &quot;Backspace&quot; para dar a ordem padrão para a
+prefeitura : &quot;reunião à mina de ouro&quot;.
+Agora você pode recrutar o terceiro operário. Pressione A até recrutar
+operário e pressione &quot;Enter&quot; para confirmar.</p>
+<p>Quando você tiver ouro suficiente ou quando a mina se esgotar,
+pressione D para controlar todos os operários, Tab até selecionar o
+bosque e &quot;Backspace&quot; para confirmar.</p>
+<p>O resto não é difícil.</p>
+</div>
+<div class="section" id="tutorial-do-capitulo-2">
+<h2><a class="toc-backref" href="#id4">2.2 Tutorial do capítulo 2</a></h2>
+<p>Dica: agrupe suas unidades de combate. Para fazer isso, controle-as
+(com a letra S) e faça-as patrulhar entre os quadrados que você quer
+proteger.</p>
+</div>
+<div class="section" id="dicas-e-truques">
+<h2><a class="toc-backref" href="#id5">2.3 Dicas e truques</a></h2>
+<ul class="simple">
+<li>Mantenha suas forças focadas.</li>
+<li>Faça seus soldados patrulharem. Soldados que patrulham podem proteger uma zona maior enquanto mantém as forças focadas.</li>
+<li>Use pontos de encontro nas construções. As construções que tem a possibilidade de recrutar unidades podem definir um ponto de encontro. As novas unidades vão ter
+esse ponto de encontro como alvo. Por exemplo um novo operário explorará a mina de ouro.</li>
+<li>Use o modo defensivo para espiar. Uma unidade no modo defensivo vai fugir se ela encontrar inimigos mais fortes. Com isso você pode saber quantos inimigos tem
+num quadrado sem sacrificar a espia. Os operários
+ficam no modo defensivo por padrão mas os soldados podem ser configurados para ficarem nesse modo também.</li>
+<li>Uma unidade que fugir esquece suas ordens. Um operário que fugir não vai voltar a recolher ouro, enquanto que se ele lutasse e sobrevivesse, ele iria voltar e
+exploraria novamente a mina.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="lista-de-comandos">
+<h1><a class="toc-backref" href="#id6">3. Lista de comandos</a></h1>
+<p>O jogo consiste em dar ordens às suas unidades e construções. Para dar
+uma ordem à uma unidade, você deve controlá-la primeiro.
+Se você pressionar F10 durante o jogo, você irá para o menu da partida.</p>
+<div class="section" id="movendo-se-pelo-mapa">
+<h2><a class="toc-backref" href="#id7">Movendo-se pelo mapa</a></h2>
+<p>As setas fazem você se mover de um quadrado a outro pelo mapa. Se um
+caminho direto existir entre o quadrado que você estiver e o novo, você
+ouvirá um som
+dependendo do tipo do caminho (caminho ou ponte). Se não existir um
+caminho direto, você ouvirá um som de colisão e permanecerá no mesmo
+quadrado (pressione control + setas para passar por cima do obstáculo).
+Se você não conhecer ainda se um caminho existe (quadrado desconhecido)
+então nenhum som será ouvido.</p>
+<p>Outra forma de se mover pelo mapa é pressionar Page Up, que levará você ao
+próximo quadrado interessante sem passar por quadrados vazios. Desde o SoundRTS 1.1 alpha
+3, algumas variantes estão disponíveis:</p>
+<ul class="simple">
+<li>pressione Alt + PageUp/PageDown para selecionar o quadrado desconhecido anterior / seguinte.</li>
+<li>pressione Shift + PageUp/PageDown para selecionar o quadrado anterior / seguinte que contenha recursos.</li>
+</ul>
+<p>Quando você controlar uma unidade e pressionar a Barra de espaço, você a
+seguirá quando ela mover de um quadrado a outro.</p>
+</div>
+<div class="section" id="escolhendo-uma-unidade-para-controlar">
+<h2><a class="toc-backref" href="#id8">Escolhendo uma unidade para controlar</a></h2>
+<p>Para controlar a próxima unidade local, pressione Q.</p>
+<p>Para controlar a próxima construção, pressione W.
+Para controlar o próximo operário, pressione E. Para controlar todos os operários locais, pressione D.
+Para controlar o próximo operário desocupado, pressione Alt + E. Para controlar todos os operários desocupados locais, pressione Alt + D.
+Para controlar o próximo soldado, pressione R. Para controlar todos os soldados locais, pressione F.
+Para controlar o próximo arqueiro, pressione T. Para controlar todos os arqueiros locais, pressione G.
+Para controlar o próximo cavaleiro, pressione Y. Para controlar todos os cavaleiros locais, pressione H.
+Para controlar a próxima catapulta, pressione U. Para controlar todas as catapultas locais, pressione J.
+Para controlar o próximo dragão, pressione I. Para controlar todos os dragões locais, pressione K.
+Para controlar o próximo mago, pressione O. Para controlar todos os magos locais, pressione L.</p>
+<p>Quando uma tecla faz você controlar a próxima unidade, a mesma tecla
+combinada com Shift faz você controlar a unidade anterior. Por exemplo,
+para controlar o operário anterior, pressione Shift + E.</p>
+<p>Para controlar todas as unidades do mesmo tipo e no mesmo quadrado que a unidade atual, pressione 1.
+Para controlar apenas a metade ou terço, pressione 2 ou 3.
+Para parar de controlar um grupo, pressione 0.</p>
+<p>Para controlar todas as unidades de combate locais, pressione S.
+Para controlar todas as unidades de combate e operários, pressione Alt + S.</p>
+<p>Quando uma tecla fazer você controlar um grupo de unidades locais, a
+mesma tecla combinada com o Control faz você controlar um grupo de todo
+o mapa. Por exemplo, para controlar todos os soldados, pressione Control R ou Control F.</p>
+</div>
+<div class="section" id="dando-uma-ordem-metodo-principal">
+<h2><a class="toc-backref" href="#id9">Dando uma ordem (método principal)</a></h2>
+<p>Para dar uma ordem à unidade controlada, o método principal consiste em
+escolher a ordem numa lista e selecionar o alvo se a ordem pedir.</p>
+<p>Para selecionar a ordem na lista, pressione A (e Shift A para a anterior).</p>
+<p>Se você precisar escolher um alvo, pressione Tab (ou Shift Tab). Para
+selecionar um quadrado remoto como alvo, use as setas.</p>
+<p>Pressione Enter para confirmar sua escolha.</p>
+</div>
+<div class="section" id="dando-uma-ordem-metodo-alternativo">
+<h2><a class="toc-backref" href="#id10">Dando uma ordem: método alternativo</a></h2>
+<p>Um segundo método de dar uma ordem consiste em selecionar um alvo com
+Tab (ou as setas) e então apertar Backspace. A ordem padrão será dada.
+Por exemplo, um operário com alvo numa mina de ouro irá explorá-la se
+você apertar Backspace.</p>
+</div>
+<div class="section" id="dando-uma-ordem-usando-atalhos">
+<h2><a class="toc-backref" href="#id11">Dando uma ordem: usando atalhos</a></h2>
+<p>Para dar uma ordem com um atalho, pressione Alt + A. Uma mensagem vai
+falar a lista de atalhos disponíveis para a unidade controlada.
+Pressione o atalho e a ordem será executada imediatamente, a menos que
+um alvo necessite ser selecionado.</p>
+</div>
+<div class="section" id="examinando-a-situacao">
+<h2><a class="toc-backref" href="#id12">Examinando a situação</a></h2>
+<p>Para saber que unidade (ou grupo) você controla, pressione Espaço.
+Ademais, você se moverá ao quadrado ocupado pela unidade (ou pelo líder do grupo).</p>
+<p>Para saber quanto de ouro você tem, pressione Z. Pressione X para a madeira e C para a comida.</p>
+<p>Para saber a vida da unidade selecionada, pressione V.</p>
+<p>Para examinar novamente um objeto selecionado com Tab, pressione Control.</p>
+</div>
+<div class="section" id="dando-uma-ordem-sem-cancelar-as-anteriores-enfileirando-comandos">
+<h2><a class="toc-backref" href="#id13">Dando uma ordem sem cancelar as anteriores (enfileirando comandos)</a></h2>
+<p>Segure Shift antes de apertar enter para confirmar a ordem.</p>
+<p>Também funciona para ordens padrões, use Shift antes de apertar
+Backspace.</p>
+<p>Pressione Espaço para verificar se a unidade tem várias ordens para executar.</p>
+<p>Aqui está uma lista de situações que enfileirar ordens pode ajudar:</p>
+<ul class="simple">
+<li>Exemplo 1: você quer mandar um operári ir em todos os quadrados iniciais (para saber onde o inimigo está). Mova o cursor para um dos quadrados iniciais e pressione
+Shift Backspace. Repita para cada quadrado inicial
+e o operário irá se mover para um quadrado e em seguida irá para outro.</li>
+<li>Exemplo 2: você quer que um operário explore vários recursos. Selecione um recurso como alvo, pressione Shift + Backspace. Repita para cada recurso. Quando um
+recurso se esgotar, o operário irá explorar os próximos de sua lista de ordens.</li>
+</ul>
+</div>
+<div class="section" id="dando-uma-ordem-imperativa">
+<h2><a class="toc-backref" href="#id14">Dando uma ordem imperativa</a></h2>
+<p>Se você segurar o Control antes de pressionar Enter ou Backspace, a
+ordem vai ser imperativa.</p>
+<p>Unidades com uma ordem imperativa tendem a ignorar tudo que não é
+relacionado à ordem. Se elas tiverem que ir em algum lugar e encontrarem
+unidades inimigas, elas vão simplesmente ignorá-las.
+Isso é arriscado na maioria das vezes mas em alguns casos pode ser útil,
+por exemplo para focar-se num alvo muito importante.</p>
+<p>Aqui estão algumas situações em que um comando imperativo pode ser útil:</p>
+<ul class="simple">
+<li>Exemplo 1: você quer que suas unidades ataquem uma construção ou unidade inimiga específica e ignorarem o resto. Selecione o alvo e aperte Control Backspace.</li>
+<li>Exemplo 2: você quer que suas unidades saiam de um quadrado e ignorem o inimigo. Selecione outro quadrado e pressione Control Backspace.</li>
+</ul>
+<p>Você pode enfileirar ordens imperativas também. Segure Control + Shift
+ao invés de Shift.</p>
+</div>
+<div class="section" id="atacando-uma-unidade-amiga">
+<h2><a class="toc-backref" href="#id15">Atacando uma unidade amiga</a></h2>
+<p>Selecione a unidade e pressione Shift Backspace: as unidades vão atacar
+o alvo.</p>
+<p>Exceção: se o alvo for uma construção danificada (ou uma unidade
+reparável como a catapulta) e você controlar operários, eles vão reparar o alvo.</p>
+</div>
+<div class="section" id="bloqueando-uma-saida">
+<h2><a class="toc-backref" href="#id16">Bloqueando uma saída</a></h2>
+<p>Introduzido na versão 1.2 alpha 10.</p>
+<p>Para bloquear uma saída (caminho, ponte), você pode fazer qualquer uma dessas alternativas:
+- ordenar uma unidade (ou várias) a bloquear a saída (dando a ordem &quot;bloquear&quot; ou usando back space com a saída como alvo);
+- construir uma muralha nela;
+- construir qualquer outra construção nela.</p>
+<p>Uma unidade ou um portão deixará unidades amigas passarem.</p>
+</div>
+<div class="section" id="modo-zoom-experimental">
+<h2><a class="toc-backref" href="#id17">Modo zoom (experimental)</a></h2>
+<p>Novo na versão 1.2 alpha 10.</p>
+<p>F8: entrar ou sair do modo zoom. Escape também sai.</p>
+<p>O quadrado é dividido em 3 quadrados menores de 3 x 3. Um quadrado
+com zoom pode ser usado como um alvo de uma ordem (ir a, essencialmente).</p>
+</div>
+<div class="section" id="grupos-de-controle">
+<h2><a class="toc-backref" href="#id18">Grupos de controle</a></h2>
+<p>Novo em 1.2 alpha 10.</p>
+<p>Control + 6, 7, 8 ou 9: configura o grupo 6, 7, 8 ou 9 com as unidades
+controladas atualmente</p>
+<p>Shift + 6, 7, 8 ou 9: adiciona as unidades controladas atualmente ao grupo 6, 7, 8 ou 9</p>
+<p>6, 7, 8 ou 9: recupera o grupo 6, 7, 8 ou 9</p>
+</div>
+<div class="section" id="nos-menus">
+<h2><a class="toc-backref" href="#id19">Nos menus</a></h2>
+<p>As setas funcionam também: Cima e Baixo para selecionar, Direita confirma, Esquerda cancela.</p>
+<p>Pressione qualquer letra para selecionar o próximo item começando com essa letra.
+Pressione Shift + qualquer letra para selecionar o item anterior começando com essa letra.</p>
+</div>
+<div class="section" id="outros-comandos">
+<h2><a class="toc-backref" href="#id20">Outros comandos</a></h2>
+<p>F5 e F6: mensagem anterior / próxima no histórico.
+Alt: interrompe a frase atual.</p>
+<p>Para sair de uma partida ou acessar o menu, pressione F10. Alt F4 e Control C fazem o mesmo.</p>
+<p>Control + Espaço: faz o jogo entrar no modo em primeira pessoa. Escape: volta para o modo mapa.</p>
+<p>Home / End, + / - do teclado numérico: aumenta / diminui o volume geral do som.
+Control Home / End, control + / - do teclado numérico: aumenta / diminui o volume relativo da voz.</p>
+<p>F3: fala o tempo de jogo.
+Control F3: sino em minuto ligado / desligado (desligado por padrão)</p>
+<p>Control + Tab seleciona apenas bosques, minas de ouro, terrenos, e
+alvos reparáveis ou construíveis (construções danificadas, terrenos de construção, catapultas danificadas...).</p>
+<p>Alt + R resseleciona a ordem dada anteriormente. Útil para recrutar a mesma unidade ou construir o mesmo tipo de construção várias vezes.
+Alt + G resseleciona a ordem dada anteriormente e a valida se não
+precisar de alvo. Por exemplo, para recrutar 5 arqueiros adicionais,
+pressione Alt + G 5 vezes.
+Desde o SoundRTS 1.1 alpha 3, Alt + A faz a mesma coisa que Alt + G.</p>
+<p>Apóstrofo (a tecla a baixo do Escape): comandos de console (apenas no modo offline).
+No momento os comandos úteis são apenas add_units (para obter unidades
+ou construções instantaneamente)
+e victory (para ganhar, por exemplo para passar um capítulo). Exemplo
+do comando &quot;add_units&quot;: &quot;add_units a1 100 archer&quot;. Novo no SoundRTS 1.2 alpha 9.</p>
+</div>
+</div>
+<div class="section" id="jogos-multijogador">
+<h1><a class="toc-backref" href="#id21">4. Jogos multijogador</a></h1>
+<div class="section" id="iniciando-um-jogo-multijogador">
+<h2><a class="toc-backref" href="#id22">4.1 Iniciando um jogo multijogador</a></h2>
+<p>Selecione multijogador e depois escolher o servidor numa lista.</p>
+<p>Num servidor público, você poderá organizar um jogo.</p>
+<p>Dica: enquanto você estiver esperando por jogadores, você pode executar
+SoundRTS uma segunda vez para jogar offline. Quando alguém aparecer,
+pressione F10 para pausar seu jogo e poder começar a jogar online.</p>
+</div>
+<div class="section" id="conversando">
+<h2><a class="toc-backref" href="#id23">4.2 Conversando</a></h2>
+<p>Você pode conversar na entrada do servidor, na sala de pré-jogo e
+durante a partida. Todavia, o organizador está temporariamente indisponível
+durante a seleção do mapa e da velocidade da partida.</p>
+<p>Para conversar com todos da mesma sala, pressione F7, digite a mensagem
+e pressione Enter.</p>
+<p>Outra opção seria usar o Skype (ou algum programa similar) se você conhece os outros jogadores.</p>
+</div>
+<div class="section" id="jogo-em-equipe">
+<h2><a class="toc-backref" href="#id24">4.3 Jogo em equipe</a></h2>
+<p>As equipes devem ser criadas antes que o jogo inicie. Elas não podem ser mudadas durante o jogo.</p>
+<p>Jogadores aliados compartilham o conhecimento do mapa, a vitória, os
+investimentos (novo no SoundRTS 1.2 alpha 9), e suas unidades podem se
+ajudar. Um trabalhador pode usar um depósito do aliado (o recurso vai
+ser adicionado à tropa do trabalhador).</p>
+<p>Num jogo de servidor, os computadores não são aliados por padrão.</p>
+<p>Nota: num jogo offline, os computadores são aliados.</p>
+<p>Dica: para jogar com um computador como aliado, crie um servidor privado.</p>
+</div>
+<div class="section" id="como-fazer-com-que-seu-servidor-fique-acessivel-a-outros-jogadores">
+<h2><a class="toc-backref" href="#id25">4.4 Como fazer com que seu servidor fique acessível a outros jogadores</a></h2>
+<p>Para verificar se seu servidor pode ser acessado fora de sua rede
+local, espere alguém conectar, ou idealmente pergunte a um amigo se ele
+pode se conectar de fora. Como uma última tentativa,
+você pode tentar usar um serviço de teste de portas ( pesquise &quot;port forwarding tester&quot;
+por exemplo). Tenha cuidado: eu não garanto que esse tipo de site não
+seja malicioso!
+O site não deve solicitar que você instale alguma ferramenta, por exemplo.</p>
+<p>Em muitos casos você terá que configurar seu roteador para que ele envie
+as conexões que entram no seu servidor na porta 2500 para seu computador da rede local.</p>
+<p>Você poderá também ter que configurar o DHCP para que seu servidor tenha
+sempre o
+mesmo endereço IP na rede local.</p>
+<p>Se você está usando um firewall, você também terá que liberar a porta 2500 nele.</p>
+<p>Sobre os servidores padrão (o que não é executado pelo menu do
+jogo):mesmo que seu servidor seja acessível de fora, em alguns casos
+você não conseguirá conectar nele de sua rede local usando a lista de
+servidores. A opção &quot;Digite o endereço IP do servidor&quot; funciona em
+muitos casos, mas ela não significa que o servidor é acessível de fora.</p>
+</div>
+<div class="section" id="como-baixar-um-mapa-de-um-servidor">
+<h2><a class="toc-backref" href="#id26">4.5 Como baixar um mapa de um servidor</a></h2>
+<p>Jogue uma partida com o mapa que você quer baixar. Antes que o jogo
+inicie, o mapa aparecerá na <a class="reference internal" href="#pasta-temporaria">pasta temporária</a> e ficará lá até que
+outro mapa o sobrescreva. Dependendo do formato do mapa, pode ser um
+arquivo de texto chamado recent_map.txt ou uma pasta chamada recent_map.</p>
+</div>
+</div>
+<div class="section" id="elementos-do-jogo">
+<h1><a class="toc-backref" href="#id27">5. Elementos do jogo</a></h1>
+<div class="section" id="comida">
+<h2><a class="toc-backref" href="#id28">Comida</a></h2>
+<p>O recrutamento de uma nova unidade só pode acontecer se o jogador tiver
+comida suficiente. Se algumas fazendas forem destruídas ou novas
+unidades forem obtidas sem recrutar, e
+a comida vir a ser insuficiente, as unidades vão ser mantidas sem
+nenhum problema. Entretanto, nenhum recrutamento vai ser permitido até
+que o jogador consiga mais comida.</p>
+</div>
+<div class="section" id="investimento-de-tecnologia">
+<h2><a class="toc-backref" href="#id29">Investimento de tecnologia</a></h2>
+<p>Os investimentos se aplicam à todas as unidades do jogador (atuais e futuras).</p>
+</div>
+<div class="section" id="unidades-voadoras">
+<h2><a class="toc-backref" href="#id30">Unidades voadoras</a></h2>
+<p>Desde o SoundRTS 1.1, as unidades aéreas voam em linha reta até o
+objetivo, ignorando o caminho terrestre.</p>
+</div>
+<div class="section" id="unidades-invisiveis-e-detectoras">
+<h2><a class="toc-backref" href="#id31">Unidades invisíveis e detectoras</a></h2>
+<p>Para se defender de unidades invisíveis, existem pelo menos 3 maneiras.</p>
+<ul class="simple">
+<li>consiga uma unidade detectora (ou lance uma magia de detecção) e ataque a unidade invisível;</li>
+<li>Use uma magia de destruição de área no quadrado que contém a unidade;</li>
+<li>ignore a unidade invisível e destrua as construções rapidamente o suficiente.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="mais-detalhes-para-personalizacao">
+<h1><a class="toc-backref" href="#id32">6. Mais detalhes para personalização</a></h1>
+<div class="section" id="soundrts-ini">
+<h2><a class="toc-backref" href="#id33">SoundRTS.ini</a></h2>
+<p>Esse arquivo se localiza na <a class="reference internal" href="#pasta-do-usuario">Pasta do usuário</a> . Ele contém vários
+parâmetros sobre como o jogo trabalha. Quando SoundRTS inicia, se esse
+arquivo contiver um erro, um novo será gerado tentando se recuperar a maior
+quantidade de parâmetros do arquivo original.</p>
+</div>
+<div class="section" id="opcoes-da-linha-de-comando">
+<h2><a class="toc-backref" href="#id34">Opções da linha de comando</a></h2>
+<p>Pela linha de comando, a opção -h dá a lista de opções disponíveis.</p>
+<p>A opção --mods sobrescreve a linha &quot;mods =&quot; do <a class="reference internal" href="#soundrts-ini">SoundRTS.ini</a> . Por
+exemplo, para iniciar SoundRTS com o soundpack e o mod orc: soundrts.exe --mods=soundpack,orc</p>
+</div>
+<div class="section" id="pacote-de-sons">
+<h2><a class="toc-backref" href="#id35">Pacote de sons</a></h2>
+<p>SoundRTS vem com um mod chamado &quot;soundpack&quot; contendo sons alternativos.
+Para ativar esse mod, no <a class="reference internal" href="#soundrts-ini">SoundRTS.ini</a> substitua a linha &quot;mods =&quot; com &quot;mods = soundpack&quot;.
+Então, reinicie o jogo para que as alterações tenham efeito.</p>
+</div>
+<div class="section" id="sapi-5-windows">
+<h2><a class="toc-backref" href="#id36">SAPI 5 (Windows)</a></h2>
+<p>No <a class="reference internal" href="#soundrts-ini">Soundrts.ini</a>, se &quot;srapi = 0&quot;, a voz padrão SAPI 5 será usada diretamente.</p>
+</div>
+<div class="section" id="parametro-srapi-para-windows">
+<h2><a class="toc-backref" href="#id37">Parâmetro srapi para Windows</a></h2>
+<p>No <a class="reference internal" href="#soundrts-ini">Soundrts.ini</a>, coloque &quot;srapi = 1&quot; para usar um leitor de tela (através de ScreenReaderAPI).</p>
+</div>
+<div class="section" id="parametro-srapi-wait-para-windows">
+<h2><a class="toc-backref" href="#id38">Parâmetro srapi_wait para Windows</a></h2>
+<p>Como eu não consegui achar uma maneira de saber quando um leitor de
+tela para de falar no Windows, eu tive que calcular a duração de cada mensagem.
+Um parâmetro adicional chamado &quot;srapi_wait&quot; determina quanto tempo SoundRTS vai esperar até que ele envie outra mensagem ao leitor.
+Com &quot;srapi_wait = .1&quot; e uma mensagem de 10 caracteres, SoundRTS vai esperar por .1 * 10 = 1 segundo.</p>
+<p>Aumente o valor de &quot;srapi_wait&quot; se algumas mensagens estão sendo interrompidas pela próxima.
+Diminua o valor de &quot;srapi_wait&quot; se o jogo está silenciando muito entre uma mensagem e outra.</p>
+</div>
+<div class="section" id="pasta-temporaria">
+<h2><a class="toc-backref" href="#id39">Pasta temporária</a></h2>
+<p>A pasta temporária contém os logs e o mapa jogado pela última vez.</p>
+<p>A pasta temporária está localizada na <a class="reference internal" href="#pasta-do-usuario">pasta do usuário</a> com o nome de &quot;tmp&quot;.</p>
+</div>
+<div class="section" id="pasta-do-usuario">
+<h2><a class="toc-backref" href="#id40">Pasta do usuário</a></h2>
+<p>A pasta do usuário contém as configurações do jogo, os mapas
+personalizados e mods, e a pasta temporária.
+Uma forma fácil de achar a pasta do usuário é abrí-la pelo menu de
+opções.</p>
+<p>Se a pasta principal do jogo tiver uma pasta denominada &quot;user&quot;, então essa pasta vai ser a pasta do usuário.
+Se a pasta &quot;user&quot; não existir, a pasta do usuário vai ser localizada dependendo do sistema operacional:</p>
+<ul class="simple">
+<li>Windows XP: &quot;C:\Documents and settings\seu_nome_de_usuario\Dados de aplicativos\SoundRTS unstable&quot;</li>
+<li>Linux: &quot;home/seu_nome_de_usuario/.SoundRTS unstable&quot;</li>
+</ul>
+</div>
+<div class="section" id="como-criar-uma-versao-portatil-do-soundrts">
+<h2><a class="toc-backref" href="#id41">Como criar uma versão portátil do SoundRTS</a></h2>
+<p>Desde o SoundRTS 1.0 beta 10 p, é possível ter todos os arquivos do jogo (log,
+configuração, mapas personalizados...) dentro da pasta do jogo. Seguem
+as instruções de como proceder para fazer isso:</p>
+<ul class="simple">
+<li>installe o SoundRTS</li>
+<li>Windows: copie a <cite>pasta do jogo</cite> de &quot;Arquivos de programas&quot; para
+uma pasta que você pode escrever (a área de trabalho, um drive USB, etc)</li>
+<li>na nova pasta do SoundRTS, crie uma pasta chamada &quot;user&quot;. &quot;user&quot; pode
+ser uma cópia de uma <a class="reference internal" href="#pasta-do-usuario">pasta do usuário</a> existente (porém a versão tem que ser a mesma).</li>
+<li>Windows: para jogar, execute &quot;soundrts.exe&quot;.</li>
+</ul>
+</div>
+<div class="section" id="como-mudar-a-velocidade-padrao-de-jogos-offline">
+<h2><a class="toc-backref" href="#id42">Como mudar a velocidade padrão de jogos offline</a></h2>
+<p>Encontre <a class="reference internal" href="#soundrts-ini">SoundRTS.ini</a> na <a class="reference internal" href="#pasta-do-usuario">pasta do usuário</a> e modifique a linha &quot;speed = ...&quot;. Use um número inteiro.</p>
+</div>
+<div class="section" id="mudando-algumas-teclas-do-jogo">
+<h2><a class="toc-backref" href="#id43">Mudando algumas teclas do jogo</a></h2>
+<p>Desde o SoundRTS 1.1, o layout de teclado está definido num arquivo
+chamado &quot;bindings.txt&quot; na <cite>pasta do jogo</cite>.</p>
+</div>
+<div class="section" id="criando-um-app-para-mac">
+<h2><a class="toc-backref" href="#id44">Criando um app para Mac</a></h2>
+<p>Se você conseguiu instalar a versão multiplataforma para o Mac, talvez
+você possa criar um app para facilitar a instalação para outros jogadores.
+Seguem algumas dicas. Use py2app.
+Você não precisa do código. Por exemplo, crie um arquivo chamado soundrts_launcher.py
+contendo essa linha: &quot;import soundrts&quot;.
+Você também pode criar um arquivo chamado server_launcher.py com a linha: &quot;import server&quot;.
+Verifique se executar &quot;soundrts_launcher.py&quot; funciona.</p>
+</div>
+<div class="section" id="usando-o-instalador-do-windows-com-uma-conta-limitada-windows-xp">
+<h2><a class="toc-backref" href="#id45">Usando o instalador do Windows com uma conta limitada (Windows XP)</a></h2>
+<p>Você pode usar uma conta limitada para instalar SoundRTS. Escolha uma
+pasta diferente da &quot;Arquivos de programas&quot;.</p>
+<p>Ainda que você instale SoundRTS com uma conta administradora, você pode jogar usando uma conta limitada.</p>
+</div>
+<div class="section" id="o-que-faz-um-mapa-multijogador-ser-oficial">
+<h2><a class="toc-backref" href="#id46">O que faz um mapa multijogador ser oficial?</a></h2>
+<p>Mapas oficiais não tocam nenhum som antes de seu título. Os mapas
+multijogador oficiais são listados em cfg/official_maps.txt com
+checksums para ter a certeza de que eles não foram modificados.</p>
+</div>
+<div class="section" id="como-selecionar-um-idioma-diferente">
+<h2><a class="toc-backref" href="#id47">Como selecionar um idioma diferente?</a></h2>
+<p>Se cfg/language.txt estar vazio, o programa selecionará automaticamente o idioma do sistema.
+Para selecionar um idioma específico, digite o código do idioma em cfg/language.txt,
+por exemplo &quot;en&quot;, &quot;fr-ca&quot;, &quot;pt&quot; ou &quot;pt-BR&quot;.
+Verifique a pasta res para saber que códigos de idioma estão incluídos.</p>
+</div>
+</div>
+<div class="section" id="creditos">
+<h1><a class="toc-backref" href="#id48">7. Créditos</a></h1>
+<p>Nota: essa lista não é exaustiva. Obrigado a todos que ajudaram!</p>
+<p>O jogo foi escrito por SoundMUD (<a class="reference external" href="mailto:soundmud&#64;gmail.com">soundmud&#64;gmail.com</a>).</p>
+<p>Descoberta da comunidade franca de jogos acessíveis de áudio, e ideias iniciais: Sabine Gorecki.
+Inúmeros testes e encourajamentos durante o primeiro período do SoundMUD: Alex.
+Primeiro teste do SoundMUD no Linux: Miguel.
+Relançamento do projeto do SoundMUD, encorajamentos durante o segundo
+período do SoundMUD para completar o jogo de estratégia, e inúmeros
+testes: Louis-Rock Lampron et Martin Morin.</p>
+<p>Tradução em Inglês: SoundMUD.
+Tradução em Alemão: Alexander Westphal from Gameport.
+Tradução em Italiano: Gabriel Battaglia.
+Tradução em Espanhol: Alan.</p>
+<p>Melhoras da voz em inglês e sons: Bryan Smart.</p>
+<p>Mapa multijogador 101 - fronteira: Bryan Smart.</p>
+<p>Notas finais do tradutor</p>
+<p>Gostaria de agradecer a todo o pessoal da BGB Blind Games Brasil, que
+traduziu o jogo até 2013, que foi quando eu comecei a traduzir. Vocês
+merecem. Sem vocês eu nunca teria conhecido esse jogo, nem o teria
+traduzido como fiz agora. Obrigado!</p>
+</div>
+</div>
+</body>
+</html>
