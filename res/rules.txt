@@ -1,8 +1,11 @@
 ; core file of mechadence mod
-; this file is used as the core system of the mechadence mod having the definitions for all specs of the game
+; this file is used as the core system of the mechadence mod ; having the definitions for all specs of the game
 ; interface things like sounds or messages are in ui folder
 
 ; misc parameters
+
+def mechas
+class race
 
 def parameters
 nb_of_resource_types 3 ; gold, plasma and energinium
@@ -31,7 +34,7 @@ extraction_qty 500
 
 ; base template for any of upgrade towers for each player
 
-def upgrade_building
+def base_building
 class building
 is_vulnerable 0
 provides_survival 0
@@ -39,7 +42,7 @@ cost 1 1 1
 hp_max 1000
 time_cost 10
 
-def basic_mecha
+def base_mecha
 class soldier
 provides_survival 1
 is_healable 1
@@ -47,7 +50,10 @@ corpse 0
 bonus_height 1
 storable_resource_types 0 1 2
 
-def basic_support_unit
+def base_support_unit
 class soldier
 provides_survival 0
 is_healable 0
+
+
+

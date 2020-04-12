@@ -1,9 +1,10 @@
-; messages
+; default messages
 
 def messages
 the_queue_is_full 143
 not_enough_resource_0 135 131
 not_enough_resource_1 135 132
+not_enough_resource_2 135 132
 not_enough_food 135 133
 population_limit_reached 4246
 production_deferred 142
@@ -20,10 +21,11 @@ requires 129
 and 23
 resource_0_title 131
 resource_1_title 132
+resource_2_title 132
 food_title 133
-recommended_maps jl8 jl7 jl6 jl5
+; recommended_maps jl8 jl7 jl6 jl5
 
-; units menus
+; basic units menus
 
 def enter
 title 4282
@@ -141,111 +143,6 @@ index 11
 def stop
 title 106
 index 12
-
-; abilities?
-
-def a_teleportation
-title 4250 4251
-alert 1328
-shortcut t
-
-def a_recall
-title 4307
-alert 1328
-shortcut r
-
-def a_holy_vision
-title 4299
-alert 1339
-shortcut v
-
-def a_conversion
-title 4274
-alert 6114
-shortcut c
-
-def a_summon_dragon
-title 4292 4231
-alert 1338
-shortcut d
-
-def a_deadly_fog
-title 4305
-alert
-shortcut f
-
-def a_raise_dead
-title 4293
-alert 1340
-shortcut r
-
-def a_resurrection
-title 4294
-alert 1339
-shortcut r
-
-def a_meteors
-title 4306
-alert
-shortcut m
-
-def a_exorcism
-title 4300
-alert
-shortcut e
-
-; upgrades
-
-def melee_weapon
-title 4215
-
-def melee_armor
-title 4217
-
-def archer_weapon
-title 4216
-
-def archer_armor
-title 4218
-
-def archer_range
-title 4233
-
-def horse_speed
-title 4254
-
-; research
-
-def superhealer
-title 4249
-
-def u_teleportation
-title 4250
-
-def u_recall
-title 4307
-
-def u_conversion
-title 4274
-
-def u_summon_dragon
-title 4292 4231
-
-def u_deadly_fog
-title 4305
-
-def u_raise_dead
-title 4293
-
-def u_resurrection
-title 4294
-
-def u_meteors
-title 4306
-
-def u_exorcism
-title 4300
-
 
 ; "abstract" classes (not used directly)
 
@@ -389,321 +286,6 @@ noise loop 1343
 ground mud
 color brown
 
-
-; buildings
-
-def buildingsite
-is_a building
-title 107 128
-noise_if_damaged
-noise_if_very_damaged
-ground gravel
-
-def farm
-is_a building
-title 83
-color hotpink
-noise repeat 15 1050
-shortcut f
-
-def lumbermill
-is_a building
-title 148
-noise repeat 15 1052
-shortcut l
-
-def barracks
-is_a building
-title 99
-color violetred
-shortcut b
-
-def townhall
-is_a building
-title 82
-color white
-noise repeat 6 1064
-shortcut h
-
-def keep
-is_a townhall
-title 4220
-noise repeat 6 1307
-
-def castle
-is_a keep
-title 4221
-noise repeat 6 1308
-
-def blacksmith
-is_a building
-title 4213
-noise repeat 15 1300
-shortcut k
-
-def stables
-is_a building
-title 4222
-noise repeat 15 1305 1306
-shortcut s
-
-def workshop
-is_a building
-title 4226
-noise repeat 15 1321
-shortcut w
-
-def dragonslair
-is_a building
-title 4227
-noise repeat 15 1320
-shortcut d
-
-def magestower
-is_a building
-title 4228
-noise repeat 15 1319
-shortcut m
-
-def temple
-is_a building
-title 4298
-shortcut p
-
-def necropolis
-is_a building
-title 4304
-shortcut n
-
-def scouttower
-is_a building
-title 4275
-noise repeat 6 6111
-shortcut t
-
-def guardtower
-is_a building
-title 4276
-noise repeat 6 6112
-launch_attack 1042
-attack_hit 1301
-
-def cannontower
-is_a building
-title 4277
-noise repeat 6 6113
-launch_attack 1084
-attack_hit 1085
-
-def wall
-is_a building
-title 4331
-shortcut a
-
-def massive_wall
-is_a building
-title 4338
-
-def gate
-is_a building
-title 4332
-shortcut g
-
-def massive_gate
-is_a building
-title 4339
-
-def shipyard
-is_a building
-title 4357
-
-; units
-
-def peasant
-is_a walking_unit
-title 85
-color brown
-noise_when_exploiting_goldmine repeat 1.6 1038 ; 1081
-noise_when_exploiting_wood repeat 1.5 1034 1035 1036 1037
-noise_when_building repeat 4 1046 1048 1049
-attack_hit 1008
-store_resource_0 1099
-store_resource_1 1098
-keyboard worker
-shortcut p
-
-def footman
-is_a walking_unit
-title 86
-color red
-attack_hit 1039 1040 1041
-attack_hit_level_1 1302
-keyboard soldier1
-shortcut f
-
-def zombie
-is_a footman
-title 4295
-noise if_me repeat 6 1336 else repeat 6 1335
-attack 1031
-
-def archer
-is_a walking_unit
-title 87
-color darkorange
-launch_attack 1042
-attack_hit 1043
-attack_hit_level_1 1301
-keyboard soldier2
-shortcut a
-
-def darkarcher
-is_a archer
-title 4283
-shortcut d
-
-def skeleton
-is_a archer
-title 4296
-noise repeat 6 1337
-attack 1031
-
-def knight
-is_a unit
-title 4225
-noise repeat 30 1305 1306
-attack_hit 1039 1040 1041
-attack_hit_level_1 1302
-move 1303 1304
-keyboard soldier3
-shortcut k
-
-def catapult
-is_a unit
-title 4201
-noise repeat 9 1311 1312 1313 ; 1082 1083 ?
-launch_attack 1084
-attack_hit 1085
-move 1082 1083
-keyboard soldier4
-shortcut c
-
-def dragon
-is_a unit
-title 4231
-noise repeat 6 1314
-launch_attack 1084
-attack_hit 1085
-death 1316
-move 1317 1318
-keyboard soldier5
-shortcut d
-
-def mage
-is_a walking_unit
-title 4229
-launch_attack 1322
-attack_hit 1323
-keyboard soldier6
-shortcut m
-
-def priest
-is_a walking_unit
-title 4297
-keyboard soldier6
-shortcut p
-
-def necromancer
-is_a walking_unit
-title 4303
-keyboard soldier6
-shortcut n
-
-def new_flyingmachine
-is_a unit
-title 4230
-move 1317 1318
-keyboard soldier7
-shortcut f
-
-def flyingmachine ; old flying machine
-is_a new_flyingmachine
-title 110 4230 ; offensive flying machine
-launch_attack 1322
-attack_hit 1323
-shortcut f
-
-def boat
-is_a unit
-title 4358
-move 1088 1088
-keyboard soldier7
-
-def destroyer
-is_a unit
-title 4359
-launch_attack 1042
-attack_hit 1043
-attack_hit_level_1 1301
-move 1088 1088
-keyboard soldier7
-
-def battleship
-is_a unit
-title 4360
-noise repeat 9 1311 1312 1313 ; 1082 1083 ?
-launch_attack 1084
-attack_hit 1085
-move 1088 1088
-keyboard soldier7
-
-def submarine
-is_a unit
-title 4361
-move 1088 1088
-keyboard soldier7
-
-def holy_vision
-is_a thing
-title
-alert
-
-def meteors
-is_a thing
-noise ambient repeat .5 1341
-
-def exorcism
-is_a thing
-noise ambient repeat .5 1339
-
-; resources
-
-def goldmine
-is_a resource_deposit
-title 81
-color gold
-exhausted 1047
-ground gravel
-
-def wood
-is_a resource_deposit
-title 80
-color forestgreen
-noise repeat 6 1055 1056 1057 1058 9999 9999
-ground leaves
-
-def meadow
-is_a thing
-title 122
-color yellowgreen
-noise repeat 1.5 1059 1060 1061 1062 1063 9999 9999 9999 9999 9999 9999 9999 9999 9999 9999
-ground grass
-
-def corpse
-is_a thing
-title
-noise repeat 6 1332 1333 1334 9999 9999 9999 9999 9999 9999 9999 9999 9999 9999
-
 ; passages
 
 def path
@@ -720,11 +302,46 @@ noise loop 1065
 ground wood .5 ; smaller area of effect
 when_moving_through 1092
 
+; buildings
 
-; factions
+def buildingsite
+is_a building
+title 107 128
+noise_if_damaged
+noise_if_very_damaged
+ground gravel
 
-def random_faction
-title 4334
+; resources
 
-def human_faction
-title 4301
+def goldmine
+is_a resource_deposit
+title 81
+color gold
+exhausted 1047
+ground gravel
+
+def plasma_canister
+is_a resource_deposit
+title 80
+color forestgreen
+noise repeat 6 1055 1056 1057 1058 9999 9999
+ground leaves
+
+def energinium_plant
+is_a resource_deposit
+title 80
+color orange
+noise repeat 6 1055 1056 1057 1058 9999 9999
+ground
+
+def meadow
+is_a thing
+title 122
+color yellowgreen
+noise repeat 1.5 1059 1060 1061 1062 1063 9999 9999 9999 9999 9999 9999 9999 9999 9999 9999
+ground grass
+
+def corpse
+is_a thing
+title
+noise repeat 6 1332 1333 1334 9999 9999 9999 9999 9999 9999 9999 9999 9999 9999
