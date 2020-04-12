@@ -514,4 +514,5 @@
 4363 forest
 4364 dense forest
 30000 map template
+30100 lame culos
 40000 little mecha
