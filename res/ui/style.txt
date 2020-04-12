@@ -302,15 +302,6 @@ noise loop 1065
 ground wood .5 ; smaller area of effect
 when_moving_through 1092
 
-; buildings
-
-def buildingsite
-is_a building
-title 107 128
-noise_if_damaged
-noise_if_very_damaged
-ground gravel
-
 ; resources
 
 def goldmine
@@ -345,3 +336,18 @@ def corpse
 is_a thing
 title
 noise repeat 6 1332 1333 1334 9999 9999 9999 9999 9999 9999 9999 9999 9999 9999
+
+; buildings
+
+def buildingsite
+is_a building
+title 107 128
+noise_if_damaged
+noise_if_very_damaged
+ground gravel
+
+; units
+
+def base_mecha
+title 40000
+move mecha-step-001 mecha-step-002 mecha-step-003 mecha-step-004

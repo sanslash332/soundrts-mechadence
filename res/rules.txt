@@ -49,6 +49,9 @@ is_healable 1
 corpse 0
 bonus_height 1
 storable_resource_types 0 1 2
+speed 1.5
+hp_max 2000
+airground_type ground
 
 def base_support_unit
 class soldier
