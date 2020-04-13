@@ -340,6 +340,13 @@ noise repeat 6 1332 1333 1334 9999 9999 9999 9999 9999 9999 9999 9999 9999 9999
 
 ; buildings
 
+def base_building
+is_a building
+title 100000
+noise_if_damaged
+noise_if_very_damaged
+ground gravel
+
 def buildingsite
 is_a building
 title 107 128
