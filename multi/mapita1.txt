@@ -29,3 +29,6 @@ speed 0.5 1.0 d5 e5 f5
 
 west_east path a1 b1 c1 c5 d1 d5 e5 f5
 south_north path d5 e1 e2 e3 e4 f5
+goldmine 500 d5
+plasma_canister 500 e5
+energinium_plant 500 f5

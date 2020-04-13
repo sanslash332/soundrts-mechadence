@@ -18,19 +18,19 @@ def goldmine
 class deposit
 resource_type 0 ; gold
 extraction_time 3
-extraction_qty 500
+extraction_qty 300
 
 def plasma_canister
 class deposit
 resource_type 1 ; plasma
 extraction_time 5
-extraction_qty 500
+extraction_qty 300
 
 def energinium_plant
 class deposit
 resource_type 2 ; energinium
 extraction_time 10
-extraction_qty 500
+extraction_qty 300
 
 ; base template for any of upgrade towers for each player
 
@@ -43,7 +43,7 @@ hp_max 1000
 time_cost 10
 
 def base_mecha
-class soldier
+class worker
 provides_survival 1
 is_healable 1
 corpse 0
@@ -57,6 +57,6 @@ def base_support_unit
 class soldier
 provides_survival 0
 is_healable 0
-
+is_vulnerable 0
 
 

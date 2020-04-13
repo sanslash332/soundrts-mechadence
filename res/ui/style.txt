@@ -308,6 +308,7 @@ def goldmine
 is_a resource_deposit
 title 81
 color gold
+noise loop gold_in_ground
 exhausted 1047
 ground gravel
 
@@ -315,15 +316,15 @@ def plasma_canister
 is_a resource_deposit
 title 80
 color forestgreen
-noise repeat 6 1055 1056 1057 1058 9999 9999
+noise loop plasma_in_ground
 ground leaves
 
 def energinium_plant
 is_a resource_deposit
 title 80
 color orange
-noise repeat 6 1055 1056 1057 1058 9999 9999
-ground
+noise loop planta_nuclear
+ground radioactive
 
 def meadow
 is_a thing
@@ -350,4 +351,10 @@ ground gravel
 
 def base_mecha
 title 40000
-move mecha-step-001 mecha-step-002 mecha-step-003 mecha-step-004
+move mecha-step-003 mecha-step-004 mecha-step-002 mecha-step-001
+; noise_when_exploiting_goldmine repeat 1.6 
+; noise_when_exploiting_energinium_plant repeat 1.5 
+noise_when_exploiting_plasma_canister repeat 1.5 plasma_explode-001 plasma_explode-002 plasma_explode-003 plasma_explode-004
+store_resource_0 1099
+store_resource_1 plasma_collect-001 plasma_collect-002 plasma_collect-003 plasma_collect-004
+store_resource_2 energinium_collect
