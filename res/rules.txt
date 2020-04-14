@@ -42,16 +42,25 @@ cost 1 1 1
 hp_max 1000
 time_cost 10
 
+def sandl_house
+is_a base_building
+is_vulnerable 1
+hp_max 50
+
 def base_mecha
 class worker
 provides_survival 1
 is_healable 1
 corpse 0
-bonus_height 1
+bonus_height 2
 storable_resource_types 0 1 2
 speed 1.5
 hp_max 2000
 airground_type ground
+cooldown 2
+damage 5
+range 15
+sight_range 50
 
 def base_support_unit
 class soldier

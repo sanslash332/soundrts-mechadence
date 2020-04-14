@@ -516,5 +516,5 @@
 30000 map template
 30100 lame culos
 40000 little mecha
-
+40001 little fucking house
 100000 casa de sandl

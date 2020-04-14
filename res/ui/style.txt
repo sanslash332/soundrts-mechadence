@@ -342,10 +342,16 @@ noise repeat 6 1332 1333 1334 9999 9999 9999 9999 9999 9999 9999 9999 9999 9999
 
 def base_building
 is_a building
-title 100000
+title 40001
 noise_if_damaged
 noise_if_very_damaged
 ground gravel
+
+def sandl_house
+is_a base_building
+title 100000
+noise loop sandl_house_noise
+death sandl_house_destroy
 
 def buildingsite
 is_a building
@@ -365,3 +371,4 @@ noise_when_exploiting_plasma_canister repeat 1.5 plasma_explode-001 plasma_explo
 store_resource_0 1099
 store_resource_1 plasma_collect-001 plasma_collect-002 plasma_collect-003 plasma_collect-004
 store_resource_2 energinium_collect
+launch_attack generick_mecha_rifle_attack

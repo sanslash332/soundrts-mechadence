@@ -32,3 +32,5 @@ south_north path d5 e1 e2 e3 e4 f5
 goldmine 500 d5
 plasma_canister 500 e5
 energinium_plant 500 f5
+
+computer_only 0 0 0 e5 sandl_house
