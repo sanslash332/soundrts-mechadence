@@ -372,3 +372,14 @@ store_resource_0 1099
 store_resource_1 plasma_collect-001 plasma_collect-002 plasma_collect-003 plasma_collect-004
 store_resource_2 energinium_collect
 launch_attack generick_mecha_rifle_attack
+
+def marsh_monster
+is_a unit
+title 40100
+move marsh-monster-step-001 marsh-monster-step-002
+death marsh-monster-death-001 marsh-monster-death-002 marsh-monster-death-003
+noise repeat 50 marsh-monster-groul
+attack marsh-monster-combat_sound marsh-monster-attack-004 marsh-monster-attack-005
+launch_attack marsh-monster-attack-001 marsh-monster-attack-002 marsh-monster-attack-003
+attack_hit marsh-monster-impact
+attack_hit_level_1 marsh-monster-impact

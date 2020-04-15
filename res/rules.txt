@@ -50,17 +50,22 @@ hp_max 50
 def base_mecha
 class worker
 provides_survival 1
+food_cost 0
+food_provided 4
 is_healable 1
+is_repairable 0
 corpse 0
-bonus_height 2
+bonus_height 1
 storable_resource_types 0 1 2
 speed 1.5
 hp_max 2000
 airground_type ground
-cooldown 2
+cooldown 1.8
 damage 5
-range 15
-sight_range 50
+range 12
+armor 0.5
+is_ballistic 1
+target_types ground air
 
 def base_support_unit
 class soldier
@@ -68,4 +73,22 @@ provides_survival 0
 is_healable 0
 is_vulnerable 0
 
+def base_enemy
+class soldier
+cost 1 1 1
+food_cost 1
+time_cost 1
+hp_max 50
+airground_type ground
 
+def marsh_monster
+is_a base_enemy
+hp_max 120
+speed 0.8
+speed_on_terrain marsh 2.6
+armor 1
+range 1.2
+damage 8
+cooldown 2
+target_types ground
+sight_range 1

@@ -33,4 +33,4 @@ goldmine 500 d5
 plasma_canister 500 e5
 energinium_plant 500 f5
 
-computer_only 0 0 0 e5 sandl_house
+computer_only 0 0 0 e5 sandl_house e5 marsh_monster
