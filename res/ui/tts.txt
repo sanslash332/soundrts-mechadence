@@ -517,5 +517,8 @@
 30100 lame culos
 40000 little mecha
 40001 little fucking house
+40010 tech market
+40011 buy repairt kit
+40012 repair unit
 40100 marsh monster
 100000 casa de sandl

@@ -8,7 +8,7 @@ nb_lines 10
 nb_players_min 2
 nb_players_max 2
 starting_squares a1 c1
-starting_units base_building base_mecha
+starting_units base_building base_mecha market
 starting_resources 1 1 1
 
 
@@ -33,4 +33,4 @@ goldmine 500 d5
 plasma_canister 500 e5
 energinium_plant 500 f5
 
-computer_only 0 0 0 e5 sandl_house e5 marsh_monster
+computer_only 0 0 0 e5 sandl_house e5 marsh_monster e3 marsh_monster

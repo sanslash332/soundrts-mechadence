@@ -42,11 +42,6 @@ cost 1 1 1
 hp_max 1000
 time_cost 10
 
-def sandl_house
-is_a base_building
-is_vulnerable 1
-hp_max 50
-
 def base_mecha
 class worker
 provides_survival 1
@@ -60,7 +55,7 @@ storable_resource_types 0 1 2
 speed 1.5
 hp_max 2000
 airground_type ground
-cooldown 1.8
+cooldown 0.8
 damage 5
 range 12
 armor 0.5
@@ -69,9 +64,11 @@ target_types ground air
 
 def base_support_unit
 class soldier
+food_cost 0
 provides_survival 0
 is_healable 0
 is_vulnerable 0
+corpse 0
 
 def base_enemy
 class soldier
@@ -81,6 +78,40 @@ time_cost 1
 hp_max 50
 airground_type ground
 
+; buildings
+
+def sandl_house
+is_a base_building
+is_vulnerable 1
+hp_max 50
+
+def market
+is_a base_building
+mana_max 100
+mana_regen 2
+can_use buy_repair_kit
+
+; objects
+
+def repair_kit_unit
+is_a base_support_unit
+speed 0
+cost 50 0 0
+hp_max 10
+decay 5
+heal_level 9
+
+def buy_repair_kit
+class ability
+universal_notification 1
+cost 50 0 0
+time_cost 1
+effect summon 5 repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit
+effect_target ask
+effect_range anywhere
+
+; map monsters 
+
 def marsh_monster
 is_a base_enemy
 hp_max 120
@@ -88,7 +119,8 @@ speed 0.8
 speed_on_terrain marsh 2.6
 armor 1
 range 1.2
-damage 8
+damage 20
 cooldown 2
 target_types ground
 sight_range 1
+

@@ -353,6 +353,11 @@ title 100000
 noise loop sandl_house_noise
 death sandl_house_destroy
 
+def market
+is_a base_building
+title 40010
+noise repeat 5 market_ambiance
+
 def buildingsite
 is_a building
 title 107 128
@@ -360,11 +365,25 @@ noise_if_damaged
 noise_if_very_damaged
 ground gravel
 
+; objects and skills
+
+def base_market_object
+alert market_buy
+
+def buy_repair_kit
+is_a base_market_object
+title 40011
+
+def repair_kit_unit
+title 40012
+noise repeat 2 medkit_apply
+
 ; units
 
 def base_mecha
 title 40000
 move mecha-step-003 mecha-step-004 mecha-step-002 mecha-step-001
+healed hp_recober
 ; noise_when_exploiting_goldmine repeat 1.6 
 ; noise_when_exploiting_energinium_plant repeat 1.5 
 noise_when_exploiting_plasma_canister repeat 1.5 plasma_explode-001 plasma_explode-002 plasma_explode-003 plasma_explode-004
