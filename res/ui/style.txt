@@ -358,6 +358,15 @@ is_a base_building
 title 40010
 noise repeat 5 market_ambiance
 
+def repair_kit_box
+is_a base_building
+title 40013
+complete market_buy
+
+def empty_repair_kit_box
+title 40014
+complete empty_box
+
 def buildingsite
 is_a building
 title 107 128

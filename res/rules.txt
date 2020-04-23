@@ -87,26 +87,35 @@ hp_max 50
 
 def market
 is_a base_building
-mana_max 100
-mana_regen 2
+can_train repair_kit_box
+
+def repair_kit_box
+is_a base_building
+cost 100 0 0
+time_cost 2
+mana_max 75
+mana_regen 0
 can_use buy_repair_kit
+can_upgrade_to empty_repair_kit_box
+
+def empty_repair_kit_box
+is_a repair_kit_box
+decay 1
 
 ; objects
 
 def repair_kit_unit
 is_a base_support_unit
 speed 0
-cost 50 0 0
 hp_max 10
-decay 5
-heal_level 9
+heal_level 2000
 
 def buy_repair_kit
 class ability
 universal_notification 1
-cost 50 0 0
+mana_cost 25
 time_cost 1
-effect summon 5 repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit repair_kit_unit
+effect summon 1 repair_kit_unit 
 effect_target ask
 effect_range anywhere
 

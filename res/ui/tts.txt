@@ -518,7 +518,9 @@
 40000 little mecha
 40001 little fucking house
 40010 tech market
-40011 buy repairt kit
+40011 active repairt kit
 40012 repair unit
+40013 repair kit box
+40014 recycle box
 40100 marsh monster
 100000 casa de sandl
