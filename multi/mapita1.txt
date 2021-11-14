@@ -34,3 +34,11 @@ plasma_canister 500 e5
 energinium_plant 500 f5
 
 computer_only 0 0 0 e5 sandl_house e5 marsh_monster e5 marsh_monster e5 marsh_monster e5 marsh_monster e5 marsh_monster e3 marsh_monster
+
+trigger computer1 (timer 1) (order (e3 1 marsh_monster) ((go a1) (go b1) (auto_attack)))
+
+trigger player1 (timer 0) (add_objective 1 101 151 83)
+
+trigger player1 (has_entered e1) (cut_scene 7502)
+
+trigger player1 (has_entered f4) (objective_complete 1)

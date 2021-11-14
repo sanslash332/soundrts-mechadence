@@ -411,3 +411,6 @@ attack marsh-monster-combat_sound marsh-monster-attack-004 marsh-monster-attack-
 launch_attack marsh-monster-attack-001 marsh-monster-attack-002 marsh-monster-attack-003
 attack_hit marsh-monster-impact
 attack_hit_level_1 marsh-monster-impact
+
+def multyshot
+alert generic_mecha_multyshot
